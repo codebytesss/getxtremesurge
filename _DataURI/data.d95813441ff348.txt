@@ -1,0 +1,1 @@
+chrome-extension://ghmbeldphafepmbegfdlkpapadhbakde/chunk.locales/nb_NO-json.js

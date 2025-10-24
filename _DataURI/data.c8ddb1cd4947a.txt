@@ -1,0 +1,1 @@
+chrome-extension://ghmbeldphafepmbegfdlkpapadhbakde/chunk.locales/sl_SI-json.js

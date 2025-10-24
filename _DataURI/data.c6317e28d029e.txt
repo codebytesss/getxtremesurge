@@ -1,0 +1,1 @@
+chrome-extension://ghmbeldphafepmbegfdlkpapadhbakde/chunk.locales/ko_KR-json.js

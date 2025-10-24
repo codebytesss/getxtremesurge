@@ -1,0 +1,1 @@
+chrome-extension://ghmbeldphafepmbegfdlkpapadhbakde/chunk.locales/id_ID-json.js

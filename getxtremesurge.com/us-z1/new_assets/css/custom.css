@@ -1,0 +1,637 @@
+.form-error {
+    display: none
+}
+
+input[type=text]:focus,
+input[type=tel]:focus,
+input[type=email]:focus,
+select:focus {
+    border: 1px solid grey;
+    border-bottom: 1px solid #1e90ff;
+    outline: none;
+}
+
+span.help-block.form-error {
+    display: none;
+}
+
+.has-error input[type=email],
+.has-error input[type=text],
+.has-error input[type=tel],
+.has-error.has-success input#phone_mask,
+.has-error select {
+    border: 1px solid #ff5e45 !important;
+    background-image: url('../images/icon-validation-bad.png') !important;
+    background-position: right center !important;
+    background-repeat: no-repeat !important;
+    background-size: 30px !important;
+}
+
+.has-success input[type=email],
+.has-success input[type=text],
+.has-success input[type=tel],
+.has-success select {
+    background-image: url('../images/icon-validation-good.png') !important;
+    background-position: right center !important;
+    background-repeat: no-repeat !important;
+
+    background-size: 30px !important;
+}
+
+body.device-mobile .pac-container {
+    top: 340px !important;
+}
+
+input::placeholder {
+    color: #aaa !important;
+}
+
+.floating-labels {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.floating-labels input {
+    position: relative !important;
+    z-index: 1 !important;
+    height: 25px;
+    padding: 18px 0 0 10px !important;
+    box-sizing: content-box !important;
+    width: 95% !important;
+    background: rgba(255, 255, 255, 0) !important;
+}
+
+.floating-labels select {
+    padding: 5px 0 5px 10px;
+    box-sizing: content-box;
+    width: 95%;
+}
+
+.floating-labels input::placeholder {
+    opacity: 0;
+}
+
+.floating-labels label {
+    font-size: 15px;
+    font-family: montserrat, sans-serif;
+    transition: all .2s;
+    cursor: text;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    opacity: 0.6;
+    font-weight: normal;
+}
+
+
+.floating-labels input:focus+label,
+.floating-labels input:not(:placeholder-shown)+label {
+    font-size: 12px;
+    color: #3498db;
+    top: 25%;
+    z-index: 2;
+}
+
+.floating-labels select+label {
+    display: none;
+}
+
+@supports (-ms-ime-align:auto) {
+    .floating-labels label {
+        display: none;
+    }
+
+    .floating-labels input {
+        height: 43px;
+        padding: 0 0 0 10px !important;
+    }
+}
+
+.optout-link {
+    display: none;
+}
+
+.page-checkout,
+.page-upsell1 {
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: contain;
+}
+
+.page-checkout,
+.page-upsell1 {
+    background-color: #FFF;
+}
+
+.page-checkout,
+.page-upsell1 {
+    background-image: url("../images/background2.jpg");
+}
+
+body.device-mobile .page-checkout,
+body.device-mobile .page-upsell1 {
+    background-size: auto;
+}
+
+.page-checkout.device-mobile,
+.page-upsell1.device-mobile {
+    background: none !important;
+}
+
+.page-shipping #banner {
+    border-top: 5px solid #f47a30;
+    border-bottom: 2px solid #ccc;
+}
+
+.page-checkout button.submit,
+.page-upsell1 button.submit,
+.page-shipping input.submit {
+    background: #6BC50C;
+    background: linear-gradient(to bottom, #6BC50C 0%, #5cb600 100%);
+}
+
+.page-checkout .final-step,
+.progress .part div:last-child,
+.progress .bar {
+    background: #f47a30;
+    background: linear-gradient(to bottom, #f47a30 0%, #e56b21 100%);
+}
+
+.page-checkout .final-step::after {
+    border-top: 11px solid #e56b21 !important;
+}
+
+.page-checkout .big-arrow::after {
+    border-left: 20px solid #f47a30 !important;
+}
+
+.page-checkout .big-arrow {
+    background: #f47a30;
+}
+
+.page-checkout footer {
+    background: white;
+    max-width: none;
+}
+
+div.logo {
+    background-image: url(../brand/logo-2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    top: 16px;
+    left: 176px;
+    width: 260px;
+    height: 100px;
+}
+
+div.bottle {
+    background-image: url(../brand/product.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 300px;
+    height: 340px;
+    position: absolute;
+}
+
+
+div.bottle_lp_bot_2,
+div.bottle_lp_bot_3,
+div.bottle_lp_bot_1 {
+    background-image: url(../brand/product.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    margin: 0;
+    width: 220px;
+    height: 220px;
+    padding: 0;
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: inline-block;
+}
+
+div.bottle_lp_bot_2 {
+    float: left;
+    margin-right: -100%;
+}
+
+div.bottle_lp_bot_3 {
+    margin-left: -100%;
+    float: right;
+}
+
+div.bottle_lp_bot_1 {
+    width: 45%;
+    z-index: 2;
+    margin: -20px auto 0;
+    width: 280px;
+    height: 280px;
+}
+
+div#bottle_lp_bot_2,
+div#bottle_lp_bot_3,
+div#bottle_lp_bot_1 {
+    background-image: url(brand/logo-2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    margin: 0;
+    width: 220px;
+    height: 220px;
+    padding: 0;
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: inline-block;
+}
+
+.right {
+    float: right;
+    left: -30px;
+    top: 460px;
+}
+
+.left {
+    float: left;
+    top: 424px;
+    left: -115px;
+}
+
+.s3hding span,
+.s4hding span,
+.s5hding span,
+.s6hding span,
+.s7hding span {
+    font-size: 35px;
+}
+
+.sec3txt {
+    padding: 20px 0 0 0;
+}
+
+.sec3txt2 {
+    padding: 63px 0 0 20px;
+}
+
+.sec3txt3 {
+    font-size: 16px;
+}
+
+.btn-txt span {
+    font-size: 24px;
+}
+
+.s4txt {
+    padding: 13px 0 0 204px;
+}
+
+.s4txt3 {
+    font-size: 14px;
+}
+
+.s4txt6 {
+    font-size: 17px;
+}
+
+.s4btn-strip {
+    margin: 81px auto 0 auto;
+}
+
+div#section5 {
+    height: 1194px;
+}
+
+.bnft-txt2,
+.sldr-tstimnl {
+    font-size: 15px;
+}
+
+.s5hding {
+    padding: 109px 0 0 0;
+}
+
+.s5lft-txt,
+.s5rgt-txt {
+    margin: 77px 0 0 0;
+}
+
+.sec7inner {
+    height: 1000px;
+}
+
+div#section8 {
+    height: 900px;
+}
+
+.s8hding {
+    padding: 142px 0 0 27px;
+}
+
+ul.s8list {
+    padding: 178px 0 0 32px;
+}
+
+.s8no-pres {
+    top: 363px;
+}
+
+.sec8btn {
+    top: -221px;
+    left: 16px;
+    position: relative;
+}
+
+.midImageContainer {
+    position: absolute;
+    right: 194px;
+    top: 62px;
+}
+
+.sec5inner {
+    position: relative;
+}
+
+.mid3ImageContainer {
+    position: absolute;
+}
+
+div.bottle_lp_bot_2,
+div.bottle_lp_bot_3 {
+    margin-left: 0;
+    margin-right: 0;
+    float: none;
+}
+
+div.bottle_lp_bot_1 {
+    top: 390px;
+    left: 361px;
+}
+
+div.bottle_lp_bot_2,
+div.bottle_lp_bot_3 {
+    top: 367px;
+}
+
+.s5lft-txt,
+.s5rgt-txt {
+    margin: 266px 0 0 0;
+}
+
+.box_lp_bot_1,
+.box_lp_bot_2,
+.box_lp_bot_3 {
+    Position: absolute;
+}
+
+.bottomImageContainer .box_lp_bot_1 {
+    top: -68px;
+    left: 498px;
+}
+
+.bottomImageContainer .box_lp_bot_2 {
+    top: -89px;
+    left: 134px;
+}
+
+.bottomImageContainer .box_lp_bot_3 {
+    top: -106px;
+    left: 99px;
+}
+
+.s4txt2 {
+    padding-top: 34px;
+}
+
+.rgt-frm {
+    height: 704px;
+}
+
+.sec3btn {
+    z-index: 1000;
+}
+
+
+div.frm-element label {
+    display: none;
+}
+
+div.frm-element input[type="text"],
+div.frm-element input[type="tel"],
+form .fields .input select {
+    margin-right: 0px;
+}
+
+div.field-first_name {
+    float: left;
+    margin-right: 1px;
+}
+
+div.field-last_name {
+    float: right;
+
+}
+
+
+div.field-first_name input {
+    height: 40px !important;
+    width: 138px !important;
+    margin-right: 10px !important;
+    margin-left: 14px !important;
+}
+
+div.field-last_name input {
+    height: 40px !important;
+    ;
+    width: 110px !important;
+    margin-right: 15px !important;
+}
+
+div.field-address input {
+    height: 40px !important;
+    width: 270px !important;
+    margin-right: 10px !important;
+    margin-left: 16px !important;
+}
+
+div.field-address_2 input {
+    height: 40px !important;
+    margin-left: 0px !important;
+    width: 83px !important;
+    margin-right: 15px !important;
+}
+
+div.field-address {
+    float: left;
+    margin-right: 0;
+}
+
+div.field-address_2 {
+    float: right;
+
+
+}
+
+div.field-zip input,
+div.field-city input,
+div.field-email input,
+div.field-phone input,
+div.field-state select {
+    height: 40px !important;
+    margin-left: 15px !important;
+    width: 270px !important;
+}
+
+.field-zip,
+.field-city {
+    clear: both;
+}
+
+.hdrtxt {
+    font-size: 14px;
+}
+
+footer {
+    font-family: 'Open Sans', 'Arial', san-serif;
+    color: #8a8a8a !important;
+    font-size: 12px;
+}
+
+footer p a {
+    color: #8a8a8a;
+    font-size: 12px;
+}
+
+footer p a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    text-align: center;
+    clear: both;
+    font-size: 12px;
+    color: #8a8a8a;
+}
+
+.footerlinks {
+    padding: 20px 0;
+}
+
+.footerlinks a {
+    font-size: 12px;
+}
+
+footer {
+    padding: 20px 10px !important;
+    max-width: 900px;
+    margin: 20px auto;
+    clear: both;
+    display: block;
+    box-sizing: border-box;
+}
+
+.error-message {
+    color: #be0000;
+    max-width: 600px;
+}
+
+p.retake-link {
+    text-align: right !important;
+}
+
+div.modal-inner.soft-modal-inner p.retake-link a {
+    cursor: pointer !important;
+    text-decoration: underline !important;
+    font-size: 12px !important;
+    float: none !important;
+}
+
+.submitting-text {
+    color: black;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 18px;
+    display: block;
+    max-width: 400px;
+}
+
+.dots {
+    color: black;
+    font-size: 28px;
+}
+
+.shipping-fields {
+    margin-top: 10px !important;
+}
+
+.shipping-fields label {
+    width: 150px;
+    text-align: right;
+    padding-right: 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.shipping-fields .shipping-field {
+    width: 300px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.shipping-fields input,
+.shipping-fields select {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    height: auto !important;
+}
+
+.shipping-fields input {
+    padding: 6px 5px !important;
+    text-indent: 0 !important;
+}
+
+.shipping-fields select {
+    padding: 5px 5px !important;
+}
+
+.shipping-fields button {
+    border: 0;
+    width: 100%;
+    display: block;
+    cursor: pointer;
+    position: relative;
+    outline: 0;
+    padding: 20px 15px;
+    background: #2288D0;
+    color: #fff;
+    font-size: 20px;
+}
+
+body.device-mobile .update-shipping-form .shipping-fields label {
+    text-align: left;
+}
+
+#form-submit.disabled,
+[type="submit"].disabled,
+#kformSubmit.disabled {
+    opacity: 0.2;
+}
+
+.addon-offer-snippet {
+    padding: 15px 0;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+}
