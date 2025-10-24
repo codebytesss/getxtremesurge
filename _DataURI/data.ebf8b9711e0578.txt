@@ -1,1 +1,0 @@
-chrome-extension://ghmbeldphafepmbegfdlkpapadhbakde/chunk.locales/tr_TR-json.js

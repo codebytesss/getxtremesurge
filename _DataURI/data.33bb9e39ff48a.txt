@@ -1,1 +1,0 @@
-chrome-extension://ghmbeldphafepmbegfdlkpapadhbakde/chunk.locales/uk_UA-json.js

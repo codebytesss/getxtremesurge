@@ -1,1 +1,0 @@
-chrome-extension://ghmbeldphafepmbegfdlkpapadhbakde/chunk.locales/es_ES-json.js

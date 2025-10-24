@@ -1,1 +1,0 @@
-chrome-extension://bakpbgckdnepkmkeaiomhmfcnejndkbi/pesticide.js
