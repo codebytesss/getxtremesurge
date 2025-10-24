@@ -13,7 +13,6 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <link rel="shortcut icon" href="./new_assets3/images/logo.png" type="image/x-icon">
     <meta name="robots" content="noindex,nofollow">
-    <link rel="stylesheet" href="./new_assets/css/modal.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
     <link rel="stylesheet" href="./new_assets/css/normalize.css">
     <link rel="stylesheet" href="./new_assets/css/index.css">
@@ -24,9 +23,7 @@
     <link rel="stylesheet" href="./new_assets/css/custom.css">
 </head>
 
-<body
-    class="device-desktop slug-test1 page-index flow-me-v2 step-1 region-us type-ss-continuity device_desktop_slug_test1_page_index_flow_me_v2_step_1_region_us_type_ss_continuity vanilla-modal"
-    data-new-gr-c-s-check-loaded="14.1258.0" data-gr-ext-installed="" cz-shortcut-listen="true">
+<body>
 
     <div id="container">
         <div class="tophdr" id="header">
@@ -81,61 +78,53 @@
                     </div>
                     <div class="form-position">
 
-                        <form class="has-validation-callback" method="post" id="partialForm"
-                            action="./app/src/create_prospect.php">
+                        <form method="post" id="partialForm" action="#">
                             <input type="hidden" name="country" id="country" value="US">
-                            <input type="hidden" name="token"
-                                value="2e5a993c4a3659ac5ecb1d3f5a1d00c4047172c47beddbff61722532856dd9eb">
-                            <input type="hidden" name="device" value="desktop">
-                            <input type="hidden" name="pk" value="5">
-                            <input type="hidden" name="shipCountry" value="US">
-                            <input type="hidden" name="AFFID" value="C7DB1EC3"><input type="hidden" name="c1" value="">
                             <div class="fields">
                                 <div class="field-first_name frm-element input left">
                                     <label>First Name: </label>
-                                    <input class="form-control" placeholder="First Name" type="text" name="fields_fname"
-                                        required="" data-validation="required">
+                                    <input class="form-control" placeholder="First Name" type="text" name="fields_fname" required="">
                                     <div class="spacer clear"></div>
                                 </div>
                                 <div class="field-last_name frm-element input left">
                                     <label>Last Name: </label>
                                     <input class="form-control" placeholder="Last Name" type="text" name="fields_lname"
-                                        required="" data-validation="required">
+                                        required="">
                                     <div class="spacer clear"></div>
                                 </div>
                                 <div class="field-zip frm-element input left">
                                     <label>Zip: </label>
-                                    <input type="tel" pattern="^[0-9]{5}" name="fields_zip" data-group="1"
-                                        placeholder="Zip / Postal" required="" data-field="shipPostalCode"
-                                        class="form-control  " data-validation="required custom"
-                                        data-validation-regexp="^[0-9]{5}">
+                                    <input type="tel" pattern="^[0-9]{5}" name="fields_zip"
+                                        placeholder="Zip / Postal" required=""
+                                        class="form-control  "
+                                       >
                                     <div class="spacer clear"></div>
                                 </div>
                                 <div class="field-address frm-element input left">
                                     <label>Address: </label>
                                     <input type="text"
                                         pattern="^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[ ])([a-zA-Z0-9\/\-\. ]+)$"
-                                        name="fields_address1" data-group="1" placeholder="Address" required=""
-                                        data-field="shipAddress1" class="form-control  "
-                                        data-validation="required custom"
-                                        data-validation-regexp="^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[ ])([a-zA-Z0-9\/\-\. ]+)$">
+                                        name="fields_address1" placeholder="Address" required=""
+                                        class="form-control  "
+                                       
+                                       >
                                     <div class="spacer clear"></div>
                                 </div>
 
                                 <div class="field-city frm-element input left">
                                     <label>City: </label>
 
-                                    <input type="text" pattern="^[a-zA-Z. ]{3,}$" name="fields_city" data-group="1"
-                                        placeholder="City" required="" data-field="shipCity" class="form-control  "
-                                        data-validation="required custom" data-validation-regexp="^[a-zA-Z. ]{3,}$">
+                                    <input type="text" pattern="^[a-zA-Z. ]{3,}$" name="fields_city"
+                                        placeholder="City" required="" class="form-control  "
+                                       >
                                     <div class="spacer clear"></div>
                                 </div>
                                 <div class="field-state frm-element input left">
                                     <label>State: </label>
 
                                     <select name="fields_state" required="" class="form-control   "
-                                        data-field="shipState" data-group="1" id="shipState" data-default=""
-                                        data-validation="required">
+                                        id="shipState" data-default=""
+                                       >
                                         <option>Select a State</option>
                                         <option value="AL">Alabama</option>
                                         <option value="AK">Alaska</option>
@@ -194,17 +183,17 @@
                                 <div class="field-phone frm-element input left">
                                     <label>Phone: </label>
 
-                                    <input type="tel" name="fields_phone" data-group="1" placeholder="Phone Number"
-                                        required="" data-field="phoneNumber" class="form-control  "
-                                        data-validation="required">
+                                    <input type="tel" name="fields_phone" placeholder="Phone Number"
+                                        required="" class="form-control  "
+                                       >
                                     <div class="spacer clear"></div>
                                 </div>
                                 <div class="field-email frm-element input left">
                                     <label>Email: </label>
 
-                                    <input type="email" name="fields_email" data-group="1" placeholder="Email Address"
-                                        required="" data-field="emailAddress" class="form-control  "
-                                        data-validation="required email">
+                                    <input type="email" name="fields_email" placeholder="Email Address"
+                                        required="" class="form-control  "
+                                       >
                                     <div class="spacer clear"></div>
                                 </div>
 
@@ -691,9 +680,8 @@
             <p class="customerservice">
                 Customer Service: </p>
             <p class="footerlinks">
-                <a href="#vmodal" data-modal-url="./static/partials/popup-terms.php">Terms &amp; Conditions</a> |
-                <a href="#vmodal" data-modal-url="./static/partials/popup-privacy.php/">Privacy Policy</a>
-
+                <a href="#">Terms &amp; Conditions</a> |
+                <a href="#">Privacy Policy</a>
             </p>
         </div>
     </footer>
@@ -702,547 +690,21 @@
 
 
 
-    <div class="modal softModal">
-        <div class="modal-inner soft-modal-inner">
-            <a data-modal-close="">×</a>
-            <div class="modal-content soft-modal-content"></div>
-        </div>
-    </div>
-
-
-
-    <div id="vmodal" style="display:none"></div>
-
-    <div id="vmodal-submitting" style="display:none">
-        <div class="vmodal-custom-content">
-            <div style="text-align: center;">
-                <div style="margin: 20px 0;"><span class="submitting-text">Submitting Your Information</span><span
-                        class="dots">.....</span></div>
-
-                <div><img src="./new_assets/images/secure.png" width="400"></div>
-            </div>
-        </div>
-    </div>
-    <script src="assets3/js/jquery-3.7.1.min.js"></script>
-    <script src="assets2/js/jquery.liveaddress.min.js"></script>
-    <script src="assets2/js/jquery.mask.min.js"></script>
-    <script src="./new_assets/js/app.min.js"></script>
     <script>
-        var softModal = new VanillaModal.default({
-            modal: ".softModal",
-            modalInner: ".soft-modal-inner",
-            modalContent: ".soft-modal-content"
-        });
+        // Update date dynamically
+        document.addEventListener('DOMContentLoaded', function() {
+            const dateElement = document.querySelector('.date-container');
+            const now = new Date();
+            const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            dateElement.textContent = " " + months[now.getMonth()] + " " + now.getDate() + ", " + now.getFullYear();
 
-        function getDate(days) {
-            var dayNames = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
-            var monthNames = new Array("January", "February", "March", "April", "May", "June", "July", "August",
-                "September", "October", "November", "December");
-            var now = new Date();
-            now.setDate(now.getDate() + days);
-            var nowString = monthNames[now.getMonth()] + " " + now.getDate() + ", " + now.getFullYear();
-            document.write(nowString);
-        }
-
-        var offer_vars = {
-            "slug": "",
-            "customer_service_phone": "",
-            "trial_length": "7 day",
-            "shipping_price": "6.95",
-            "msrp": "119.98"
-        };
-
-        function vmodal() {
-            $("a[href='#vmodal']").click(function (e) {
-                e.preventDefault();
-                var self = this;
-
-                $("#vmodal").load($(self).data("modal-url"), function () {
-                    softModal.open("#vmodal");
-
-                    if (typeof popup_callback === 'function') {
-                        popup_callback($(self).data("modal-url"));
-                    }
+            // Scroll to top functionality
+            const scrollButtons = document.querySelectorAll('.toTop');
+            scrollButtons.forEach(function(button) {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
                 });
-            });
-        }
-
-
-        $('.show-after-load').hide();
-
-        setTimeout(function () {
-            $('.show-after-load').fadeIn('fast');
-        }, 500);
-
-        var submitting = false;
-
-        $(function () {
-            vmodal();
-
-            if ($('[data-state]').length) {
-                $('[data-state]').change(function () {
-                    let states = ($(this).find('option:selected').data('states'));
-
-                    if (typeof states == 'object') {
-                        $('#' + $(this).data('state')).html(
-                            "<option selected='selected'>Select State</option>");
-                        var def = $('#' + $(this).data('state')).data('default');
-
-                        for (var i in states) {
-                            var sel = def && i == def ? "selected='selected'" : '';
-
-                            $('#' + $(this).data('state')).append("<option value='" + i + "' " + sel +
-                                ">" + states[i] + "</option>");
-                        }
-
-                        $('#' + $(this).data('state')).trigger('change').blur();
-                    }
-                });
-
-                $('[data-state]').trigger('change');
-            }
-
-            $.validate({
-                modules: "html5",
-                scrollToTopOnError: false,
-                validateOnBlur: true,
-                errorMessagePosition: "top",
-            });
-
-            $('#zip,#fields_zip,[name*=shipPostalCode],[name*=Zip]').mask('00000');
-            $('#phoneNumber,#fields_phone,[name*=phoneNumber],[name*=Phone]').mask('000-000-0000');
-
-            $('#ccnum').mask('0000 0000 0000 0009');
-            $('#ccexp').mask('00 / 00');
-            $('#cvv').mask('000');
-
-            $('#ccnum').on('blur', function () {
-                $('#3ds_ccnum').val($(this).val().replace(/[^0-9]/g, ''));
-            });
-
-            $('.toTop').click(function () {
-                var body = $("html, body");
-                body.stop().animate({
-                    scrollTop: 0
-                }, 500, 'swing', function () { });
-            });
-
-            $(".toForm").click(function () {
-                $([document.documentElement, document.body]).animate({
-                    scrollTop: $("form").offset().top
-                }, 500);
-            });
-
-            $('input[name*="shipPostalCode"]').blur(function (e) {
-                let group = $(this).data('group');
-                let country = $('[name*="shipping_country"][data-group="' + group + '"]').val() ? $(
-                    '[name*="shipping_country"][data-group="' + group + '"]').val() : 'US';
-
-                $.ajax({
-                    url: "https://api.zippopotam.us/" + country + "/" + $(this).val(),
-                    method: 'GET',
-                    dataType: 'json',
-                    success: function (data) {
-                        try {
-                            if (data.places[0]["state abbreviation"]) {
-                                $('[name*="shipState"][data-group="' + group + '"]').val(data
-                                    .places[0]["state abbreviation"]);
-
-                                $('[name*="shipState"][data-group="' + group + '"]').trigger(
-                                    'blur');
-                            }
-                            if (data.places[0]["place name"]) {
-                                $('[name*="shipCity"][data-group="' + group + '"]').val(data
-                                    .places[0]["place name"]);
-
-                                $('[name*="shipCity"][data-group="' + group + '"]').trigger(
-                                    'blur');
-                            }
-                        } catch (e) { }
-                    },
-                    error: function (xhr) {
-                        console.log(xhr.status);
-                    }
-                });
-            });
-
-            if ($('#countdown').length) {
-                var timer = 299;
-
-                if (typeof localStorage != 'undefined') {
-                    timer = parseInt(localStorage.getItem('reservation_countdown'));
-                }
-
-                if (isNaN(timer)) timer = 299;
-
-                if (timer < 0) timer = 0;
-
-                $('#countdown').html(get_time_string(timer));
-
-                startTimer(timer, $('#countdown').get('0'));
-            }
-
-            animate_dots();
-        });
-
-
-        if ($('#vmodal-error').length) {
-            softModal.open('#vmodal-error');
-        }
-
-        $('.prospect-form,.checkout-form,.upsell-form,.full-checkout-form').submit(function (e) {
-            e.preventDefault();
-
-            var self = this;
-
-            $('#vmodal').html($('#vmodal-submitting').html());
-
-            if (!softModal.isOpen) {
-                softModal.open('#vmodal');
-            }
-
-            if ($(self).hasClass('prospect-form')) {
-                vmodal_msg('Submitting Your Information');
-            }
-
-            submit_form(self);
-        });
-
-        function animate_dots() {
-            $('.dots').each(function () {
-                let dots = $(this).html();
-
-                if (dots.length < 8) {
-                    dots += '.';
-                } else {
-                    dots = '.';
-                }
-
-                $(this).html(dots);
-            });
-
-            setTimeout(animate_dots, 750);
-        }
-
-        function startTimer(duration, display) {
-            var timer = duration;
-
-            setInterval(function () {
-                display.textContent = get_time_string(timer);
-
-                if (timer) {
-                    timer--;
-                }
-
-                if (typeof localStorage != 'undefined') {
-                    localStorage.setItem('reservation_countdown', timer);
-                }
-            }, 999);
-        }
-
-        $(function ($) {
-            var mydate = new Date();
-            var montharray = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December",];
-            $(".date-container").text(" " + montharray[mydate.getMonth()] + " " + mydate.getDate() + ", " + mydate.getFullYear());
-        });
-
-        function get_time_string(timer) {
-            var minutes, seconds;
-            minutes = parseInt(timer / 60, 10);
-            seconds = parseInt(timer % 60, 10);
-
-            minutes = minutes < 10 ? "0" + minutes : minutes;
-            seconds = seconds < 10 ? "0" + seconds : seconds;
-
-            return minutes + ":" + seconds + "!";
-        }
-
-        function vmodal_msg(msg) {
-            $('.soft-modal-content .vmodal-custom-content .submitting-text').html(msg);
-        }
-
-        function submit_form(self) {
-
-            if (!submitting) {
-                submitting = true;
-
-                var param_arr = $(self).serializeArray();
-
-                if (typeof threeds_result === 'object') {
-                    for (var key in threeds_result) {
-                        param_arr.push({
-                            name: key,
-                            value: threeds_result[key]
-                        });
-                    }
-                }
-
-                $.ajax({
-                    url: './app/src/create_prospect.php',
-                    data: param_arr,
-                    type: 'POST1',
-                    success: function (resp) {
-                        submitting = false;
-
-                        var decline_url = '';
-
-                        try {
-                            resp = JSON.parse(resp);
-
-                            if (resp.success && (!decline_url || !resp.is_decline)) {
-                                if (resp.next_page) {
-                                    window.location = resp.next_page;
-                                } else {
-                                    if (window.address_validation) {
-                                        if ($('#form-submit').length) {
-                                            $('#form-submit').trigger('click');
-                                        } else if ($('input[type="submit"]').length) {
-                                            $('input[type="submit"]').trigger('click');
-                                        } else if ($('button[type="submit"]').length) {
-                                            $('button[type="submit"]').trigger('click');
-                                        } else {
-                                            $('input[type="image"]').trigger('click');
-                                        }
-                                    } else {
-                                        softModal.close('#vmodal');
-                                    }
-                                }
-                            } else if (decline_url) {
-                                window.location = decline_url;
-                            } else if (resp.message) {
-
-                                if ($(self).hasClass('full-checkout-form')) {
-                                    $('.soft-modal-content .vmodal-custom-content').html(resp.message);
-                                } else {
-                                    if (resp.message.indexOf('Shipping Address Error') === -1) {
-                                        if (typeof submit_form_response_hook === 'function') {
-                                            submit_form_response_hook(resp.message);
-                                        } else {
-                                            $('.soft-modal-content .vmodal-custom-content').html(resp
-                                                .message);
-                                        }
-                                    } else {
-                                        $('.soft-modal-content .vmodal-custom-content').html($(
-                                            '#vmodal-shipping-form').html());
-
-                                        $.validate({
-                                            modules: "html5",
-                                            scrollToTopOnError: false,
-                                            validateOnBlur: true,
-                                            errorMessagePosition: "top"
-                                        });
-
-                                        $('.soft-modal-content .vmodal-custom-content .error-message').html(
-                                            resp.message);
-
-                                        $('.soft-modal-content .update-shipping-form').submit(function (e) {
-                                            e.preventDefault();
-                                            submitting = false;
-                                            let eles = $(this).serializeArray();
-
-                                            for (var i in eles) {
-                                                $('#vmodal-shipping-form input[name="' + eles[i]
-                                                    .name + '"]').attr('value', eles[i].value);
-                                                $('#vmodal-shipping-form select[name="' + eles[i]
-                                                    .name + '"] option').attr('selected', false);
-                                                $('#vmodal-shipping-form select[name="' + eles[i]
-                                                    .name + '"] option[value="' + eles[i]
-                                                        .value + '"]').attr('selected', 'selected');
-                                            }
-
-                                            $('.soft-modal-content .vmodal-custom-content').html($(
-                                                '#vmodal-submitting').html());
-                                            window.address_validation = true;
-
-                                            submit_form(this);
-                                        });
-                                    }
-                                }
-                            }
-                        } catch (e) {
-                            console.log(resp);
-                        }
-
-                    },
-                    error: function (e) {
-                        submitting = false;
-                    }
-                });
-            }
-        }
-
-        function enable_mc_modal_on_timeout() { };
-
-        function enable_mc_modal_on_cc() { };
-
-        try {
-
-            sessionStorage.setItem("reservation_countdown", 5);
-            $('.product .mc-promo').hide();
-            $('#ccnum').parent().before(
-                '<div class="fields"><label>Card Type</label>&nbsp;<select required data-validation="required" name="creditCardType" id="creditCardType"><option value="">Card Type</option><option value="master">Master Card</option><option value="visa">Visa</option><option value="discover">Discover</option></select></div>'
-            );
-            $("#ccnum").after(
-                "<p class='validcard' style='display:none; color:red; font-size:11px; text-align:center; margin:0;'>Incorrect card type</p>"
-            );
-
-            $('#ccnum').keyup(changeCampaignBasedOnInput);
-            $('#ccnum').change(changeCampaignBasedOnInput);
-            $('#ccnum').blur(changeCampaignBasedOnInput);
-            $('#creditCardType').change(changeCampaignBasedOnCardType);
-
-            function nonMasterCard() {
-                $('.product .mc-promo').hide();
-                var price = $('#checkout-trial-price').text().replace('$', '');
-                var shipping = 11.95;
-                var shippingCart = $('#checkout_trial_length').next('ul').find('li:nth-child(2)').text().replace('$',
-                    '').replace('S&H:', '');
-                $('#checkout_trial_length').next('ul').find('li:nth-child(2)').html($('#checkout_trial_length').next(
-                    'ul').find('li:nth-child(2)').html().replace(shippingCart, shipping));
-                var disc = $('#checkout_trial_length').next('ul').find('li:nth-child(3)').text().replace('$', '')
-                    .replace('Discount:-', '');
-                Tot = '$' + parseFloat((parseFloat(price) + parseFloat(shipping)) - disc).toFixed(2);
-                $('.product .total').text(Tot);
-                sessionStorage.setItem("total", Tot);
-                sessionStorage.setItem("cardType", "other");
-            }
-            if ($('.product .total').length > 0) {
-                nonMasterCard();
-            }
-
-            function masterCard() {
-                $('.product .mc-promo').show();
-                price = $('#checkout-trial-price').text().replace('$', '');
-                var shipping = 11.95;
-                var shippingCart = $('#checkout_trial_length').next('ul').find('li:nth-child(2)').text().replace('$',
-                    '').replace('S&H:', '');
-                $('#checkout_trial_length').next('ul').find('li:nth-child(2)').html($('#checkout_trial_length').next(
-                    'ul').find('li:nth-child(2)').html().replace(shippingCart, shipping));
-                disc = $('#checkout_trial_length').next('ul').find('li:nth-child(3)').text().replace('$', '').replace(
-                    'Discount:-', '');
-                mc_dis = $('#checkout_trial_length').next('ul').find('li:nth-child(4)').text().replace('$', '').replace(
-                    'MasterCard Promo:-', '');
-                Tot = '$' + parseFloat((parseFloat(price) + parseFloat(shipping)) - disc - mc_dis).toFixed(2);
-                $('.product .total').text(Tot);
-                sessionStorage.setItem("total", Tot);
-                sessionStorage.setItem("cardType", "mastercard")
-            }
-
-
-            function formErr() {
-                $(".validcard").show();
-                $(".submit button").css({
-                    "opacity": "0.6",
-                    "pointer-events": "none"
-                });
-            }
-
-            function clearErr() {
-                $(".validcard").hide();
-                $(".submit button").removeAttr("style")
-            }
-
-            function changeCampaignBasedOnCardType() {
-                var cardNumb = $('#ccnum').val();
-                var cardTypeSelect = $('#creditCardType').val()
-                if (cardTypeSelect == 'master') {
-                    masterCard()
-                    if (cardNumb.length === 19 && cardNumb.slice(0, 1) != 5) {
-                        formErr()
-                    } else {
-                        clearErr()
-                    }
-                } else if (cardTypeSelect == 'visa') {
-                    nonMasterCard()
-                    if (cardNumb.length === 19 && cardNumb.slice(0, 1) != 4) {
-                        formErr()
-                    } else {
-                        clearErr()
-                    }
-                } else if (cardTypeSelect == 'discover') {
-                    nonMasterCard()
-                    if (cardNumb.length === 19 && cardNumb.slice(0, 1) != 6) {
-                        formErr()
-                    } else {
-                        clearErr()
-                    }
-                }
-            }
-
-            function changeCampaignBasedOnInput() {
-                var cardNumb = $('#ccnum').val();
-                var cardTypeSelect = $('#creditCardType').val()
-
-                if (cardNumb.length === 19 && cardNumb.slice(0, 1) == 4) {
-                    $('#creditCardType').val('visa')
-                    nonMasterCard()
-                } else if (cardNumb.length === 19 && cardNumb.slice(0, 1) == 6) {
-                    $('#creditCardType').val('discover')
-                    nonMasterCard()
-                } else if (cardNumb.length === 19 && cardNumb.slice(0, 1) == 5) {
-                    $('#creditCardType').val('master')
-                    masterCard()
-                }
-
-                if (cardNumb.length < 19) {
-                    formErr()
-                } else {
-                    clearErr()
-                }
-            }
-
-            var updatedTotalPrice = sessionStorage.getItem("total")
-
-            var cardType = sessionStorage.getItem("cardType")
-            $('.step-2 p.line-5').text(updatedTotalPrice)
-
-            if (cardType == "mastercard") {
-                $('#receipt .step-1 .totalamounts p').text(updatedTotalPrice)
-                $('#receipt .step-2 .totalamounts p').text(updatedTotalPrice)
-            }
-
-            let total = 0;
-            $('#receipt .totalamounts').each(function (index) {
-                total += $(this).text().trim().slice(1) - 0
-            });
-
-            $("#subtotal .bold .rprice").text('$' + total.toFixed(2))
-
-            let shipping = 0;
-            let nutra = [$('#receipt .step-1 .totalamounts p').text().trim().slice(1) - 0, $(
-                '#receipt .step-2 .totalamounts p').text().trim().slice(1) - 0]
-            nutra.forEach(function (item, index) {
-                shipping += item
-            })
-
-            $('#subtotal tr:nth-child(2n) td:last-child p').text('$' + shipping.toFixed(2));
-        } catch (e) {
-            console.log(e);
-        }
-        $('input[name*="fields_zip"]').blur(function (e) {
-            let group = $(this).data('group');
-            let country = $('[name*="country"]').val() ? $('[name*="country"]').val() : 'US';
-
-            $.ajax({
-                url: "https://api.zippopotam.us/" + country + "/" + $(this).val(),
-                method: 'GET',
-                dataType: 'json',
-                success: function (data) {
-                    console.log(data);
-                    try {
-                        if (data.places[0]["state abbreviation"]) {
-                            $('[name*="fields_state"]').val(data.places[0]["state abbreviation"]);
-
-                            $('[name*="fields_state"]').trigger('blur');
-                        }
-                        if (data.places[0]["place name"]) {
-                            $('[name*="fields_city"]').val(data.places[0]["place name"]);
-
-                            $('[name*="fields_city"]').trigger('blur');
-                        }
-                    } catch (e) { }
-                },
-                error: function (xhr) { console.log(xhr.status); }
             });
         });
     </script>
