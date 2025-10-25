@@ -9,7 +9,7 @@
     <!-- <link href="/us-z1/assets3/css/app.css" rel="stylesheet" /> -->
     <link href="/assets/css/app.css" rel="stylesheet" />
     <link
-      href="/us-z1/assets3/css/checkout.css?v=1"
+      href="/assets/css/checkout.css?v=1"
       type="text/css"
       rel="stylesheet"
     />
@@ -93,6 +93,11 @@
 
       form {
         padding: 0;
+      }
+
+      .steps__item.active {
+        background-color: #FD6F03;
+        color: white;
       }
     </style>
 
@@ -2274,20 +2279,20 @@
 
     <script
       type="text/javascript"
-      src="/us-z1/assets3/js/jquery-3.7.1.min.js"
+      src="/assets/js/jquery-3.7.1.min.js"
     ></script>
     <script
       type="text/javascript"
-      src="/us-z1/assets3/js/social-proof.js?v=1"
+      src="/assets/js/social-proof.js?v=1"
     ></script>
-    <script type="text/javascript" src="/us-z1/assets3/js/scripts.js"></script>
+    <script type="text/javascript" src="/assets/js/scripts.js"></script>
     <script
       type="text/javascript"
-      src="/us-z1/assets3/js/jquery.mask.min.js"
+      src="/assets/js/jquery.mask.min.js"
     ></script>
     <script
       type="text/javascript"
-      src="/us-z1/assets3/js/jquery.cardtype.js"
+      src="/assets/js/jquery.cardtype.js"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <style>
@@ -2356,24 +2361,29 @@
     <script>
       // Iterate product selection
       var selectButtons = $(".package-info__btn");
-      $(".product-selection > .product").click(function () {
+      selectButtons.click(function () {
         // Update package selected
-        $(".active").removeClass("active");
-        $(this).addClass("active");
+        $(".product").removeClass("active");
+        $(this).closest(".product").addClass("active");
 
         // Update hidden field
-        $("input[name=package]").val($(this).data("pkg"));
-        //$("#x_amount").val($(this).data('price'));
+        var pkg = $(this).closest(".product").data("pkg");
+        $("input[name=package]").val(pkg);
 
         // Update button text
-        var parentElement = this;
         selectButtons.each(function (i) {
-          if ($.contains(parentElement, this)) {
+          if ($(this).closest(".product").hasClass("active")) {
             $(this).text("Selected!");
           } else {
             $(this).text("Select Package");
           }
         });
+      });
+
+      // Steps click event
+      $(".steps__item").click(function () {
+        $(".steps__item").removeClass("active");
+        $(this).addClass("active");
       });
     </script>
 
