@@ -192,8 +192,8 @@ h1, h2, h3, h4, p {
 .delivery-block:before {
 	content: "";
 	background: url(../images/ca.png) no-repeat center;
-	width: 130px;
-	height: 30px;
+	width: 148px;
+	height: 39px;
 	background-size: contain;
 	position: absolute;
 	left: 0;
