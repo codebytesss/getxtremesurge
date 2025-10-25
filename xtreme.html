@@ -1,0 +1,2864 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Xtreme Surge</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link href="./assets/brand/product.png" rel="icon" type="image/png" />
+
+    <!-- <link href="/us-z1/assets3/css/app.css" rel="stylesheet" /> -->
+    <link href="/assets/css/app.css" rel="stylesheet" />
+    <link
+      href="/us-z1/assets3/css/checkout.css?v=1"
+      type="text/css"
+      rel="stylesheet"
+    />
+    <link
+      href="/assets/css/checkout.css?v=2"
+      type="text/css"
+      rel="stylesheet"
+    />
+    <link
+      href="/assets/css/responsive.css"
+      type="text/css"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&amp;family=Oswald:wght@400;500;600;700&amp;family=Roboto+Condensed:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .chkbox {
+        width: auto !important;
+        height: auto !important;
+        appearance: checkbox !important;
+        outline: auto !important;
+        display: inline !important;
+        text-align: center !important;
+      }
+
+      label.payment_as_shipping_label {
+        text-align: center;
+        display: inline;
+        font-size: 16px !important;
+      }
+    </style>
+    <script type="text/javascript">
+      function getDate(days) {
+        var monthNames = new Array(
+          "Jan",
+          "Feb",
+          "Mar",
+          "Apr",
+          "May",
+          "Jun",
+          "Jul",
+          "Aug",
+          "Sep",
+          "Oct",
+          "Nov",
+          "Dec"
+        );
+        var now = new Date();
+        now.setDate(now.getDate() + days);
+        var nowString =
+          monthNames[now.getMonth()] +
+          " " +
+          now.getDate() +
+          ", " +
+          now.getFullYear();
+        document.write(nowString);
+      }
+    </script>
+    <script>
+      history.pushState(null, null, window.location.href);
+      history.back();
+      history.forward();
+      window.onpopstate = function () {
+        history.go(1);
+      };
+    </script>
+    <style>
+      .frmCheckElemts {
+        margin-top: 15px;
+        text-align: center;
+      }
+
+      .frmCheckElemts label {
+        font-size: 11px !important;
+        font-weight: normal;
+      }
+
+      form {
+        padding: 0;
+      }
+    </style>
+
+    <style>
+      :root {
+        --swal2-outline: 0 0 0 3px rgba(100, 150, 200, 0.5);
+        --swal2-container-padding: 0.625em;
+        --swal2-backdrop: rgba(0, 0, 0, 0.4);
+        --swal2-backdrop-transition: background-color 0.15s;
+        --swal2-width: 32em;
+        --swal2-padding: 0 0 1.25em;
+        --swal2-border: none;
+        --swal2-border-radius: 0.3125rem;
+        --swal2-background: white;
+        --swal2-color: #545454;
+        --swal2-show-animation: swal2-show 0.3s;
+        --swal2-hide-animation: swal2-hide 0.15s forwards;
+        --swal2-icon-zoom: 1;
+        --swal2-icon-animations: true;
+        --swal2-title-padding: 0.8em 1em 0;
+        --swal2-html-container-padding: 1em 1.6em 0.3em;
+        --swal2-input-border: 1px solid #d9d9d9;
+        --swal2-input-border-radius: 0.1875em;
+        --swal2-input-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.06),
+          0 0 0 3px transparent;
+        --swal2-input-background: transparent;
+        --swal2-input-transition: border-color 0.2s, box-shadow 0.2s;
+        --swal2-input-hover-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.06),
+          0 0 0 3px transparent;
+        --swal2-input-focus-border: 1px solid #b4dbed;
+        --swal2-input-focus-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.06),
+          0 0 0 3px rgba(100, 150, 200, 0.5);
+        --swal2-progress-step-background: #add8e6;
+        --swal2-validation-message-background: #f0f0f0;
+        --swal2-validation-message-color: #666;
+        --swal2-footer-border-color: #eee;
+        --swal2-footer-background: transparent;
+        --swal2-footer-color: inherit;
+        --swal2-timer-progress-bar-background: rgba(0, 0, 0, 0.3);
+        --swal2-close-button-position: initial;
+        --swal2-close-button-inset: auto;
+        --swal2-close-button-font-size: 2.5em;
+        --swal2-close-button-color: #ccc;
+        --swal2-close-button-transition: color 0.2s, box-shadow 0.2s;
+        --swal2-close-button-outline: initial;
+        --swal2-close-button-box-shadow: inset 0 0 0 3px transparent;
+        --swal2-close-button-focus-box-shadow: inset var(--swal2-outline);
+        --swal2-close-button-hover-transform: none;
+        --swal2-actions-justify-content: center;
+        --swal2-actions-width: auto;
+        --swal2-actions-margin: 1.25em auto 0;
+        --swal2-actions-padding: 0;
+        --swal2-actions-border-radius: 0;
+        --swal2-actions-background: transparent;
+        --swal2-action-button-transition: background-color 0.2s, box-shadow 0.2s;
+        --swal2-action-button-hover: black 10%;
+        --swal2-action-button-active: black 10%;
+        --swal2-confirm-button-box-shadow: none;
+        --swal2-confirm-button-border-radius: 0.25em;
+        --swal2-confirm-button-background-color: #7066e0;
+        --swal2-confirm-button-color: #fff;
+        --swal2-deny-button-box-shadow: none;
+        --swal2-deny-button-border-radius: 0.25em;
+        --swal2-deny-button-background-color: #dc3741;
+        --swal2-deny-button-color: #fff;
+        --swal2-cancel-button-box-shadow: none;
+        --swal2-cancel-button-border-radius: 0.25em;
+        --swal2-cancel-button-background-color: #6e7881;
+        --swal2-cancel-button-color: #fff;
+        --swal2-toast-show-animation: swal2-toast-show 0.5s;
+        --swal2-toast-hide-animation: swal2-toast-hide 0.1s forwards;
+        --swal2-toast-border: none;
+        --swal2-toast-box-shadow: 0 0 1px hsl(0deg 0% 0% / 0.075),
+          0 1px 2px hsl(0deg 0% 0% / 0.075), 1px 2px 4px hsl(0deg 0% 0% / 0.075),
+          1px 3px 8px hsl(0deg 0% 0% / 0.075),
+          2px 4px 16px hsl(0deg 0% 0% / 0.075);
+      }
+      [data-swal2-theme="dark"] {
+        --swal2-dark-theme-black: #19191a;
+        --swal2-dark-theme-white: #e1e1e1;
+        --swal2-background: var(--swal2-dark-theme-black);
+        --swal2-color: var(--swal2-dark-theme-white);
+        --swal2-footer-border-color: #555;
+        --swal2-input-background: color-mix(
+          in srgb,
+          var(--swal2-dark-theme-black),
+          var(--swal2-dark-theme-white) 10%
+        );
+        --swal2-validation-message-background: color-mix(
+          in srgb,
+          var(--swal2-dark-theme-black),
+          var(--swal2-dark-theme-white) 10%
+        );
+        --swal2-validation-message-color: var(--swal2-dark-theme-white);
+        --swal2-timer-progress-bar-background: rgba(255, 255, 255, 0.7);
+      }
+      @media (prefers-color-scheme: dark) {
+        [data-swal2-theme="auto"] {
+          --swal2-dark-theme-black: #19191a;
+          --swal2-dark-theme-white: #e1e1e1;
+          --swal2-background: var(--swal2-dark-theme-black);
+          --swal2-color: var(--swal2-dark-theme-white);
+          --swal2-footer-border-color: #555;
+          --swal2-input-background: color-mix(
+            in srgb,
+            var(--swal2-dark-theme-black),
+            var(--swal2-dark-theme-white) 10%
+          );
+          --swal2-validation-message-background: color-mix(
+            in srgb,
+            var(--swal2-dark-theme-black),
+            var(--swal2-dark-theme-white) 10%
+          );
+          --swal2-validation-message-color: var(--swal2-dark-theme-white);
+          --swal2-timer-progress-bar-background: rgba(255, 255, 255, 0.7);
+        }
+      }
+      body.swal2-shown:not(.swal2-no-backdrop, .swal2-toast-shown) {
+        overflow: hidden;
+      }
+      body.swal2-height-auto {
+        height: auto !important;
+      }
+      body.swal2-no-backdrop .swal2-container {
+        background-color: rgba(0, 0, 0, 0) !important;
+        pointer-events: none;
+      }
+      body.swal2-no-backdrop .swal2-container .swal2-popup {
+        pointer-events: all;
+      }
+      body.swal2-no-backdrop .swal2-container .swal2-modal {
+        box-shadow: 0 0 10px var(--swal2-backdrop);
+      }
+      body.swal2-toast-shown .swal2-container {
+        box-sizing: border-box;
+        width: 360px;
+        max-width: 100%;
+        background-color: rgba(0, 0, 0, 0);
+        pointer-events: none;
+      }
+      body.swal2-toast-shown .swal2-container.swal2-top {
+        inset: 0 auto auto 50%;
+        transform: translateX(-50%);
+      }
+      body.swal2-toast-shown .swal2-container.swal2-top-end,
+      body.swal2-toast-shown .swal2-container.swal2-top-right {
+        inset: 0 0 auto auto;
+      }
+      body.swal2-toast-shown .swal2-container.swal2-top-start,
+      body.swal2-toast-shown .swal2-container.swal2-top-left {
+        inset: 0 auto auto 0;
+      }
+      body.swal2-toast-shown .swal2-container.swal2-center-start,
+      body.swal2-toast-shown .swal2-container.swal2-center-left {
+        inset: 50% auto auto 0;
+        transform: translateY(-50%);
+      }
+      body.swal2-toast-shown .swal2-container.swal2-center {
+        inset: 50% auto auto 50%;
+        transform: translate(-50%, -50%);
+      }
+      body.swal2-toast-shown .swal2-container.swal2-center-end,
+      body.swal2-toast-shown .swal2-container.swal2-center-right {
+        inset: 50% 0 auto auto;
+        transform: translateY(-50%);
+      }
+      body.swal2-toast-shown .swal2-container.swal2-bottom-start,
+      body.swal2-toast-shown .swal2-container.swal2-bottom-left {
+        inset: auto auto 0 0;
+      }
+      body.swal2-toast-shown .swal2-container.swal2-bottom {
+        inset: auto auto 0 50%;
+        transform: translateX(-50%);
+      }
+      body.swal2-toast-shown .swal2-container.swal2-bottom-end,
+      body.swal2-toast-shown .swal2-container.swal2-bottom-right {
+        inset: auto 0 0 auto;
+      }
+      @media print {
+        body.swal2-shown:not(.swal2-no-backdrop, .swal2-toast-shown) {
+          overflow-y: scroll !important;
+        }
+        body.swal2-shown:not(.swal2-no-backdrop, .swal2-toast-shown)
+          > [aria-hidden="true"] {
+          display: none;
+        }
+        body.swal2-shown:not(.swal2-no-backdrop, .swal2-toast-shown)
+          .swal2-container {
+          position: static !important;
+        }
+      }
+      div:where(.swal2-container) {
+        display: grid;
+        position: fixed;
+        z-index: 1060;
+        inset: 0;
+        box-sizing: border-box;
+        grid-template-areas: "top-start     top            top-end" "center-start  center         center-end" "bottom-start  bottom-center  bottom-end";
+        grid-template-rows: minmax(min-content, auto) minmax(min-content, auto) minmax(
+            min-content,
+            auto
+          );
+        height: 100%;
+        padding: var(--swal2-container-padding);
+        overflow-x: hidden;
+        transition: var(--swal2-backdrop-transition);
+        -webkit-overflow-scrolling: touch;
+      }
+      div:where(.swal2-container).swal2-backdrop-show,
+      div:where(.swal2-container).swal2-noanimation {
+        background: var(--swal2-backdrop);
+      }
+      div:where(.swal2-container).swal2-backdrop-hide {
+        background: rgba(0, 0, 0, 0) !important;
+      }
+      div:where(.swal2-container).swal2-top-start,
+      div:where(.swal2-container).swal2-center-start,
+      div:where(.swal2-container).swal2-bottom-start {
+        grid-template-columns: minmax(0, 1fr) auto auto;
+      }
+      div:where(.swal2-container).swal2-top,
+      div:where(.swal2-container).swal2-center,
+      div:where(.swal2-container).swal2-bottom {
+        grid-template-columns: auto minmax(0, 1fr) auto;
+      }
+      div:where(.swal2-container).swal2-top-end,
+      div:where(.swal2-container).swal2-center-end,
+      div:where(.swal2-container).swal2-bottom-end {
+        grid-template-columns: auto auto minmax(0, 1fr);
+      }
+      div:where(.swal2-container).swal2-top-start > .swal2-popup {
+        align-self: start;
+      }
+      div:where(.swal2-container).swal2-top > .swal2-popup {
+        grid-column: 2;
+        place-self: start center;
+      }
+      div:where(.swal2-container).swal2-top-end > .swal2-popup,
+      div:where(.swal2-container).swal2-top-right > .swal2-popup {
+        grid-column: 3;
+        place-self: start end;
+      }
+      div:where(.swal2-container).swal2-center-start > .swal2-popup,
+      div:where(.swal2-container).swal2-center-left > .swal2-popup {
+        grid-row: 2;
+        align-self: center;
+      }
+      div:where(.swal2-container).swal2-center > .swal2-popup {
+        grid-column: 2;
+        grid-row: 2;
+        place-self: center center;
+      }
+      div:where(.swal2-container).swal2-center-end > .swal2-popup,
+      div:where(.swal2-container).swal2-center-right > .swal2-popup {
+        grid-column: 3;
+        grid-row: 2;
+        place-self: center end;
+      }
+      div:where(.swal2-container).swal2-bottom-start > .swal2-popup,
+      div:where(.swal2-container).swal2-bottom-left > .swal2-popup {
+        grid-column: 1;
+        grid-row: 3;
+        align-self: end;
+      }
+      div:where(.swal2-container).swal2-bottom > .swal2-popup {
+        grid-column: 2;
+        grid-row: 3;
+        place-self: end center;
+      }
+      div:where(.swal2-container).swal2-bottom-end > .swal2-popup,
+      div:where(.swal2-container).swal2-bottom-right > .swal2-popup {
+        grid-column: 3;
+        grid-row: 3;
+        place-self: end end;
+      }
+      div:where(.swal2-container).swal2-grow-row > .swal2-popup,
+      div:where(.swal2-container).swal2-grow-fullscreen > .swal2-popup {
+        grid-column: 1/4;
+        width: 100%;
+      }
+      div:where(.swal2-container).swal2-grow-column > .swal2-popup,
+      div:where(.swal2-container).swal2-grow-fullscreen > .swal2-popup {
+        grid-row: 1/4;
+        align-self: stretch;
+      }
+      div:where(.swal2-container).swal2-no-transition {
+        transition: none !important;
+      }
+      div:where(.swal2-container)[popover] {
+        width: auto;
+        border: 0;
+      }
+      div:where(.swal2-container) div:where(.swal2-popup) {
+        display: none;
+        position: relative;
+        box-sizing: border-box;
+        grid-template-columns: minmax(0, 100%);
+        width: var(--swal2-width);
+        max-width: 100%;
+        padding: var(--swal2-padding);
+        border: var(--swal2-border);
+        border-radius: var(--swal2-border-radius);
+        background: var(--swal2-background);
+        color: var(--swal2-color);
+        font-family: inherit;
+        font-size: 1rem;
+        container-name: swal2-popup;
+      }
+      div:where(.swal2-container) div:where(.swal2-popup):focus {
+        outline: none;
+      }
+      div:where(.swal2-container) div:where(.swal2-popup).swal2-loading {
+        overflow-y: hidden;
+      }
+      div:where(.swal2-container) div:where(.swal2-popup).swal2-draggable {
+        cursor: grab;
+      }
+      div:where(.swal2-container)
+        div:where(.swal2-popup).swal2-draggable
+        div:where(.swal2-icon) {
+        cursor: grab;
+      }
+      div:where(.swal2-container) div:where(.swal2-popup).swal2-dragging {
+        cursor: grabbing;
+      }
+      div:where(.swal2-container)
+        div:where(.swal2-popup).swal2-dragging
+        div:where(.swal2-icon) {
+        cursor: grabbing;
+      }
+      div:where(.swal2-container) h2:where(.swal2-title) {
+        position: relative;
+        max-width: 100%;
+        margin: 0;
+        padding: var(--swal2-title-padding);
+        color: inherit;
+        font-size: 1.875em;
+        font-weight: 600;
+        text-align: center;
+        text-transform: none;
+        overflow-wrap: break-word;
+        cursor: initial;
+      }
+      div:where(.swal2-container) div:where(.swal2-actions) {
+        display: flex;
+        z-index: 1;
+        box-sizing: border-box;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: var(--swal2-actions-justify-content);
+        width: var(--swal2-actions-width);
+        margin: var(--swal2-actions-margin);
+        padding: var(--swal2-actions-padding);
+        border-radius: var(--swal2-actions-border-radius);
+        background: var(--swal2-actions-background);
+      }
+      div:where(.swal2-container) div:where(.swal2-loader) {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        width: 2.2em;
+        height: 2.2em;
+        margin: 0 1.875em;
+        animation: swal2-rotate-loading 1.5s linear 0s infinite normal;
+        border-width: 0.25em;
+        border-style: solid;
+        border-radius: 100%;
+        border-color: #2778c4 rgba(0, 0, 0, 0) #2778c4 rgba(0, 0, 0, 0);
+      }
+      div:where(.swal2-container) button:where(.swal2-styled) {
+        margin: 0.3125em;
+        padding: 0.625em 1.1em;
+        transition: var(--swal2-action-button-transition);
+        border: none;
+        box-shadow: 0 0 0 3px rgba(0, 0, 0, 0);
+        font-weight: 500;
+      }
+      div:where(.swal2-container) button:where(.swal2-styled):not([disabled]) {
+        cursor: pointer;
+      }
+      div:where(.swal2-container)
+        button:where(.swal2-styled):where(.swal2-confirm) {
+        border-radius: var(--swal2-confirm-button-border-radius);
+        background: initial;
+        background-color: var(--swal2-confirm-button-background-color);
+        box-shadow: var(--swal2-confirm-button-box-shadow);
+        color: var(--swal2-confirm-button-color);
+        font-size: 1em;
+      }
+      div:where(.swal2-container)
+        button:where(.swal2-styled):where(.swal2-confirm):hover {
+        background-color: color-mix(
+          in srgb,
+          var(--swal2-confirm-button-background-color),
+          var(--swal2-action-button-hover)
+        );
+      }
+      div:where(.swal2-container)
+        button:where(.swal2-styled):where(.swal2-confirm):active {
+        background-color: color-mix(
+          in srgb,
+          var(--swal2-confirm-button-background-color),
+          var(--swal2-action-button-active)
+        );
+      }
+      div:where(.swal2-container)
+        button:where(.swal2-styled):where(.swal2-deny) {
+        border-radius: var(--swal2-deny-button-border-radius);
+        background: initial;
+        background-color: var(--swal2-deny-button-background-color);
+        box-shadow: var(--swal2-deny-button-box-shadow);
+        color: var(--swal2-deny-button-color);
+        font-size: 1em;
+      }
+      div:where(.swal2-container)
+        button:where(.swal2-styled):where(.swal2-deny):hover {
+        background-color: color-mix(
+          in srgb,
+          var(--swal2-deny-button-background-color),
+          var(--swal2-action-button-hover)
+        );
+      }
+      div:where(.swal2-container)
+        button:where(.swal2-styled):where(.swal2-deny):active {
+        background-color: color-mix(
+          in srgb,
+          var(--swal2-deny-button-background-color),
+          var(--swal2-action-button-active)
+        );
+      }
+      div:where(.swal2-container)
+        button:where(.swal2-styled):where(.swal2-cancel) {
+        border-radius: var(--swal2-cancel-button-border-radius);
+        background: initial;
+        background-color: var(--swal2-cancel-button-background-color);
+        box-shadow: var(--swal2-cancel-button-box-shadow);
+        color: var(--swal2-cancel-button-color);
+        font-size: 1em;
+      }
+      div:where(.swal2-container)
+        button:where(.swal2-styled):where(.swal2-cancel):hover {
+        background-color: color-mix(
+          in srgb,
+          var(--swal2-cancel-button-background-color),
+          var(--swal2-action-button-hover)
+        );
+      }
+      div:where(.swal2-container)
+        button:where(.swal2-styled):where(.swal2-cancel):active {
+        background-color: color-mix(
+          in srgb,
+          var(--swal2-cancel-button-background-color),
+          var(--swal2-action-button-active)
+        );
+      }
+      div:where(.swal2-container) button:where(.swal2-styled):focus-visible {
+        outline: none;
+        box-shadow: var(--swal2-action-button-focus-box-shadow);
+      }
+      div:where(.swal2-container)
+        button:where(.swal2-styled)[disabled]:not(.swal2-loading) {
+        opacity: 0.4;
+      }
+      div:where(.swal2-container)
+        button:where(.swal2-styled)::-moz-focus-inner {
+        border: 0;
+      }
+      div:where(.swal2-container) div:where(.swal2-footer) {
+        margin: 1em 0 0;
+        padding: 1em 1em 0;
+        border-top: 1px solid var(--swal2-footer-border-color);
+        background: var(--swal2-footer-background);
+        color: var(--swal2-footer-color);
+        font-size: 1em;
+        text-align: center;
+        cursor: initial;
+      }
+      div:where(.swal2-container) .swal2-timer-progress-bar-container {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        grid-column: auto !important;
+        overflow: hidden;
+        border-bottom-right-radius: var(--swal2-border-radius);
+        border-bottom-left-radius: var(--swal2-border-radius);
+      }
+      div:where(.swal2-container) div:where(.swal2-timer-progress-bar) {
+        width: 100%;
+        height: 0.25em;
+        background: var(--swal2-timer-progress-bar-background);
+      }
+      div:where(.swal2-container) img:where(.swal2-image) {
+        max-width: 100%;
+        margin: 2em auto 1em;
+        cursor: initial;
+      }
+      div:where(.swal2-container) button:where(.swal2-close) {
+        position: var(--swal2-close-button-position);
+        inset: var(--swal2-close-button-inset);
+        z-index: 2;
+        align-items: center;
+        justify-content: center;
+        width: 1.2em;
+        height: 1.2em;
+        margin-top: 0;
+        margin-right: 0;
+        margin-bottom: -1.2em;
+        padding: 0;
+        overflow: hidden;
+        transition: var(--swal2-close-button-transition);
+        border: none;
+        border-radius: var(--swal2-border-radius);
+        outline: var(--swal2-close-button-outline);
+        background: rgba(0, 0, 0, 0);
+        color: var(--swal2-close-button-color);
+        font-family: monospace;
+        font-size: var(--swal2-close-button-font-size);
+        cursor: pointer;
+        justify-self: end;
+      }
+      div:where(.swal2-container) button:where(.swal2-close):hover {
+        transform: var(--swal2-close-button-hover-transform);
+        background: rgba(0, 0, 0, 0);
+        color: #f27474;
+      }
+      div:where(.swal2-container) button:where(.swal2-close):focus-visible {
+        outline: none;
+        box-shadow: var(--swal2-close-button-focus-box-shadow);
+      }
+      div:where(.swal2-container) button:where(.swal2-close)::-moz-focus-inner {
+        border: 0;
+      }
+      div:where(.swal2-container) div:where(.swal2-html-container) {
+        z-index: 1;
+        justify-content: center;
+        margin: 0;
+        padding: var(--swal2-html-container-padding);
+        overflow: auto;
+        color: inherit;
+        font-size: 1.125em;
+        font-weight: normal;
+        line-height: normal;
+        text-align: center;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        cursor: initial;
+      }
+      div:where(.swal2-container) input:where(.swal2-input),
+      div:where(.swal2-container) input:where(.swal2-file),
+      div:where(.swal2-container) textarea:where(.swal2-textarea),
+      div:where(.swal2-container) select:where(.swal2-select),
+      div:where(.swal2-container) div:where(.swal2-radio),
+      div:where(.swal2-container) label:where(.swal2-checkbox) {
+        margin: 1em 2em 3px;
+      }
+      div:where(.swal2-container) input:where(.swal2-input),
+      div:where(.swal2-container) input:where(.swal2-file),
+      div:where(.swal2-container) textarea:where(.swal2-textarea) {
+        box-sizing: border-box;
+        width: auto;
+        transition: var(--swal2-input-transition);
+        border: var(--swal2-input-border);
+        border-radius: var(--swal2-input-border-radius);
+        background: var(--swal2-input-background);
+        box-shadow: var(--swal2-input-box-shadow);
+        color: inherit;
+        font-size: 1.125em;
+      }
+      div:where(.swal2-container) input:where(.swal2-input).swal2-inputerror,
+      div:where(.swal2-container) input:where(.swal2-file).swal2-inputerror,
+      div:where(.swal2-container)
+        textarea:where(.swal2-textarea).swal2-inputerror {
+        border-color: #f27474 !important;
+        box-shadow: 0 0 2px #f27474 !important;
+      }
+      div:where(.swal2-container) input:where(.swal2-input):hover,
+      div:where(.swal2-container) input:where(.swal2-file):hover,
+      div:where(.swal2-container) textarea:where(.swal2-textarea):hover {
+        box-shadow: var(--swal2-input-hover-box-shadow);
+      }
+      div:where(.swal2-container) input:where(.swal2-input):focus,
+      div:where(.swal2-container) input:where(.swal2-file):focus,
+      div:where(.swal2-container) textarea:where(.swal2-textarea):focus {
+        border: var(--swal2-input-focus-border);
+        outline: none;
+        box-shadow: var(--swal2-input-focus-box-shadow);
+      }
+      div:where(.swal2-container) input:where(.swal2-input)::placeholder,
+      div:where(.swal2-container) input:where(.swal2-file)::placeholder,
+      div:where(.swal2-container) textarea:where(.swal2-textarea)::placeholder {
+        color: #ccc;
+      }
+      div:where(.swal2-container) .swal2-range {
+        margin: 1em 2em 3px;
+        background: var(--swal2-background);
+      }
+      div:where(.swal2-container) .swal2-range input {
+        width: 80%;
+      }
+      div:where(.swal2-container) .swal2-range output {
+        width: 20%;
+        color: inherit;
+        font-weight: 600;
+        text-align: center;
+      }
+      div:where(.swal2-container) .swal2-range input,
+      div:where(.swal2-container) .swal2-range output {
+        height: 2.625em;
+        padding: 0;
+        font-size: 1.125em;
+        line-height: 2.625em;
+      }
+      div:where(.swal2-container) .swal2-input {
+        height: 2.625em;
+        padding: 0 0.75em;
+      }
+      div:where(.swal2-container) .swal2-file {
+        width: 75%;
+        margin-right: auto;
+        margin-left: auto;
+        background: var(--swal2-input-background);
+        font-size: 1.125em;
+      }
+      div:where(.swal2-container) .swal2-textarea {
+        height: 6.75em;
+        padding: 0.75em;
+      }
+      div:where(.swal2-container) .swal2-select {
+        min-width: 50%;
+        max-width: 100%;
+        padding: 0.375em 0.625em;
+        background: var(--swal2-input-background);
+        color: inherit;
+        font-size: 1.125em;
+      }
+      div:where(.swal2-container) .swal2-radio,
+      div:where(.swal2-container) .swal2-checkbox {
+        align-items: center;
+        justify-content: center;
+        background: var(--swal2-background);
+        color: inherit;
+      }
+      div:where(.swal2-container) .swal2-radio label,
+      div:where(.swal2-container) .swal2-checkbox label {
+        margin: 0 0.6em;
+        font-size: 1.125em;
+      }
+      div:where(.swal2-container) .swal2-radio input,
+      div:where(.swal2-container) .swal2-checkbox input {
+        flex-shrink: 0;
+        margin: 0 0.4em;
+      }
+      div:where(.swal2-container) label:where(.swal2-input-label) {
+        display: flex;
+        justify-content: center;
+        margin: 1em auto 0;
+      }
+      div:where(.swal2-container) div:where(.swal2-validation-message) {
+        align-items: center;
+        justify-content: center;
+        margin: 1em 0 0;
+        padding: 0.625em;
+        overflow: hidden;
+        background: var(--swal2-validation-message-background);
+        color: var(--swal2-validation-message-color);
+        font-size: 1em;
+        font-weight: 300;
+      }
+      div:where(.swal2-container) div:where(.swal2-validation-message)::before {
+        content: "!";
+        display: inline-block;
+        width: 1.5em;
+        min-width: 1.5em;
+        height: 1.5em;
+        margin: 0 0.625em;
+        border-radius: 50%;
+        background-color: #f27474;
+        color: #fff;
+        font-weight: 600;
+        line-height: 1.5em;
+        text-align: center;
+      }
+      div:where(.swal2-container) .swal2-progress-steps {
+        flex-wrap: wrap;
+        align-items: center;
+        max-width: 100%;
+        margin: 1.25em auto;
+        padding: 0;
+        background: rgba(0, 0, 0, 0);
+        font-weight: 600;
+      }
+      div:where(.swal2-container) .swal2-progress-steps li {
+        display: inline-block;
+        position: relative;
+      }
+      div:where(.swal2-container) .swal2-progress-steps .swal2-progress-step {
+        z-index: 20;
+        flex-shrink: 0;
+        width: 2em;
+        height: 2em;
+        border-radius: 2em;
+        background: #2778c4;
+        color: #fff;
+        line-height: 2em;
+        text-align: center;
+      }
+      div:where(.swal2-container)
+        .swal2-progress-steps
+        .swal2-progress-step.swal2-active-progress-step {
+        background: #2778c4;
+      }
+      div:where(.swal2-container)
+        .swal2-progress-steps
+        .swal2-progress-step.swal2-active-progress-step
+        ~ .swal2-progress-step {
+        background: var(--swal2-progress-step-background);
+        color: #fff;
+      }
+      div:where(.swal2-container)
+        .swal2-progress-steps
+        .swal2-progress-step.swal2-active-progress-step
+        ~ .swal2-progress-step-line {
+        background: var(--swal2-progress-step-background);
+      }
+      div:where(.swal2-container)
+        .swal2-progress-steps
+        .swal2-progress-step-line {
+        z-index: 10;
+        flex-shrink: 0;
+        width: 2.5em;
+        height: 0.4em;
+        margin: 0 -1px;
+        background: #2778c4;
+      }
+      div:where(.swal2-icon) {
+        position: relative;
+        box-sizing: content-box;
+        justify-content: center;
+        width: 5em;
+        height: 5em;
+        margin: 2.5em auto 0.6em;
+        zoom: var(--swal2-icon-zoom);
+        border: 0.25em solid rgba(0, 0, 0, 0);
+        border-radius: 50%;
+        border-color: #000;
+        font-family: inherit;
+        line-height: 5em;
+        cursor: default;
+        user-select: none;
+      }
+      div:where(.swal2-icon) .swal2-icon-content {
+        display: flex;
+        align-items: center;
+        font-size: 3.75em;
+      }
+      div:where(.swal2-icon).swal2-error {
+        border-color: #f27474;
+        color: #f27474;
+      }
+      div:where(.swal2-icon).swal2-error .swal2-x-mark {
+        position: relative;
+        flex-grow: 1;
+      }
+      div:where(.swal2-icon).swal2-error [class^="swal2-x-mark-line"] {
+        display: block;
+        position: absolute;
+        top: 2.3125em;
+        width: 2.9375em;
+        height: 0.3125em;
+        border-radius: 0.125em;
+        background-color: #f27474;
+      }
+      div:where(.swal2-icon).swal2-error
+        [class^="swal2-x-mark-line"][class$="left"] {
+        left: 1.0625em;
+        transform: rotate(45deg);
+      }
+      div:where(.swal2-icon).swal2-error
+        [class^="swal2-x-mark-line"][class$="right"] {
+        right: 1em;
+        transform: rotate(-45deg);
+      }
+      @container swal2-popup style(--swal2-icon-animations:true) {
+        div:where(.swal2-icon).swal2-error.swal2-icon-show {
+          animation: swal2-animate-error-icon 0.5s;
+        }
+        div:where(.swal2-icon).swal2-error.swal2-icon-show .swal2-x-mark {
+          animation: swal2-animate-error-x-mark 0.5s;
+        }
+      }
+      div:where(.swal2-icon).swal2-warning {
+        border-color: #f8bb86;
+        color: #f8bb86;
+      }
+      @container swal2-popup style(--swal2-icon-animations:true) {
+        div:where(.swal2-icon).swal2-warning.swal2-icon-show {
+          animation: swal2-animate-error-icon 0.5s;
+        }
+        div:where(.swal2-icon).swal2-warning.swal2-icon-show
+          .swal2-icon-content {
+          animation: swal2-animate-i-mark 0.5s;
+        }
+      }
+      div:where(.swal2-icon).swal2-info {
+        border-color: #3fc3ee;
+        color: #3fc3ee;
+      }
+      @container swal2-popup style(--swal2-icon-animations:true) {
+        div:where(.swal2-icon).swal2-info.swal2-icon-show {
+          animation: swal2-animate-error-icon 0.5s;
+        }
+        div:where(.swal2-icon).swal2-info.swal2-icon-show .swal2-icon-content {
+          animation: swal2-animate-i-mark 0.8s;
+        }
+      }
+      div:where(.swal2-icon).swal2-question {
+        border-color: #87adbd;
+        color: #87adbd;
+      }
+      @container swal2-popup style(--swal2-icon-animations:true) {
+        div:where(.swal2-icon).swal2-question.swal2-icon-show {
+          animation: swal2-animate-error-icon 0.5s;
+        }
+        div:where(.swal2-icon).swal2-question.swal2-icon-show
+          .swal2-icon-content {
+          animation: swal2-animate-question-mark 0.8s;
+        }
+      }
+      div:where(.swal2-icon).swal2-success {
+        border-color: #a5dc86;
+        color: #a5dc86;
+      }
+      div:where(.swal2-icon).swal2-success
+        [class^="swal2-success-circular-line"] {
+        position: absolute;
+        width: 3.75em;
+        height: 7.5em;
+        border-radius: 50%;
+      }
+      div:where(.swal2-icon).swal2-success
+        [class^="swal2-success-circular-line"][class$="left"] {
+        top: -0.4375em;
+        left: -2.0635em;
+        transform: rotate(-45deg);
+        transform-origin: 3.75em 3.75em;
+        border-radius: 7.5em 0 0 7.5em;
+      }
+      div:where(.swal2-icon).swal2-success
+        [class^="swal2-success-circular-line"][class$="right"] {
+        top: -0.6875em;
+        left: 1.875em;
+        transform: rotate(-45deg);
+        transform-origin: 0 3.75em;
+        border-radius: 0 7.5em 7.5em 0;
+      }
+      div:where(.swal2-icon).swal2-success .swal2-success-ring {
+        position: absolute;
+        z-index: 2;
+        top: -0.25em;
+        left: -0.25em;
+        box-sizing: content-box;
+        width: 100%;
+        height: 100%;
+        border: 0.25em solid rgba(165, 220, 134, 0.3);
+        border-radius: 50%;
+      }
+      div:where(.swal2-icon).swal2-success .swal2-success-fix {
+        position: absolute;
+        z-index: 1;
+        top: 0.5em;
+        left: 1.625em;
+        width: 0.4375em;
+        height: 5.625em;
+        transform: rotate(-45deg);
+      }
+      div:where(.swal2-icon).swal2-success [class^="swal2-success-line"] {
+        display: block;
+        position: absolute;
+        z-index: 2;
+        height: 0.3125em;
+        border-radius: 0.125em;
+        background-color: #a5dc86;
+      }
+      div:where(.swal2-icon).swal2-success
+        [class^="swal2-success-line"][class$="tip"] {
+        top: 2.875em;
+        left: 0.8125em;
+        width: 1.5625em;
+        transform: rotate(45deg);
+      }
+      div:where(.swal2-icon).swal2-success
+        [class^="swal2-success-line"][class$="long"] {
+        top: 2.375em;
+        right: 0.5em;
+        width: 2.9375em;
+        transform: rotate(-45deg);
+      }
+      @container swal2-popup style(--swal2-icon-animations:true) {
+        div:where(.swal2-icon).swal2-success.swal2-icon-show
+          .swal2-success-line-tip {
+          animation: swal2-animate-success-line-tip 0.75s;
+        }
+        div:where(.swal2-icon).swal2-success.swal2-icon-show
+          .swal2-success-line-long {
+          animation: swal2-animate-success-line-long 0.75s;
+        }
+        div:where(.swal2-icon).swal2-success.swal2-icon-show
+          .swal2-success-circular-line-right {
+          animation: swal2-rotate-success-circular-line 4.25s ease-in;
+        }
+      }
+      [class^="swal2"] {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      }
+      .swal2-show {
+        animation: var(--swal2-show-animation);
+      }
+      .swal2-hide {
+        animation: var(--swal2-hide-animation);
+      }
+      .swal2-noanimation {
+        transition: none;
+      }
+      .swal2-scrollbar-measure {
+        position: absolute;
+        top: -9999px;
+        width: 50px;
+        height: 50px;
+        overflow: scroll;
+      }
+      .swal2-rtl .swal2-close {
+        margin-right: initial;
+        margin-left: 0;
+      }
+      .swal2-rtl .swal2-timer-progress-bar {
+        right: 0;
+        left: auto;
+      }
+      .swal2-toast {
+        box-sizing: border-box;
+        grid-column: 1/4 !important;
+        grid-row: 1/4 !important;
+        grid-template-columns: min-content auto min-content;
+        padding: 1em;
+        overflow-y: hidden;
+        border: var(--swal2-toast-border);
+        background: var(--swal2-background);
+        box-shadow: var(--swal2-toast-box-shadow);
+        pointer-events: all;
+      }
+      .swal2-toast > * {
+        grid-column: 2;
+      }
+      .swal2-toast h2:where(.swal2-title) {
+        margin: 0.5em 1em;
+        padding: 0;
+        font-size: 1em;
+        text-align: initial;
+      }
+      .swal2-toast .swal2-loading {
+        justify-content: center;
+      }
+      .swal2-toast input:where(.swal2-input) {
+        height: 2em;
+        margin: 0.5em;
+        font-size: 1em;
+      }
+      .swal2-toast .swal2-validation-message {
+        font-size: 1em;
+      }
+      .swal2-toast div:where(.swal2-footer) {
+        margin: 0.5em 0 0;
+        padding: 0.5em 0 0;
+        font-size: 0.8em;
+      }
+      .swal2-toast button:where(.swal2-close) {
+        grid-column: 3/3;
+        grid-row: 1/99;
+        align-self: center;
+        width: 0.8em;
+        height: 0.8em;
+        margin: 0;
+        font-size: 2em;
+      }
+      .swal2-toast div:where(.swal2-html-container) {
+        margin: 0.5em 1em;
+        padding: 0;
+        overflow: initial;
+        font-size: 1em;
+        text-align: initial;
+      }
+      .swal2-toast div:where(.swal2-html-container):empty {
+        padding: 0;
+      }
+      .swal2-toast .swal2-loader {
+        grid-column: 1;
+        grid-row: 1/99;
+        align-self: center;
+        width: 2em;
+        height: 2em;
+        margin: 0.25em;
+      }
+      .swal2-toast .swal2-icon {
+        grid-column: 1;
+        grid-row: 1/99;
+        align-self: center;
+        width: 2em;
+        min-width: 2em;
+        height: 2em;
+        margin: 0 0.5em 0 0;
+      }
+      .swal2-toast .swal2-icon .swal2-icon-content {
+        display: flex;
+        align-items: center;
+        font-size: 1.8em;
+        font-weight: bold;
+      }
+      .swal2-toast .swal2-icon.swal2-success .swal2-success-ring {
+        width: 2em;
+        height: 2em;
+      }
+      .swal2-toast .swal2-icon.swal2-error [class^="swal2-x-mark-line"] {
+        top: 0.875em;
+        width: 1.375em;
+      }
+      .swal2-toast
+        .swal2-icon.swal2-error
+        [class^="swal2-x-mark-line"][class$="left"] {
+        left: 0.3125em;
+      }
+      .swal2-toast
+        .swal2-icon.swal2-error
+        [class^="swal2-x-mark-line"][class$="right"] {
+        right: 0.3125em;
+      }
+      .swal2-toast div:where(.swal2-actions) {
+        justify-content: flex-start;
+        height: auto;
+        margin: 0;
+        margin-top: 0.5em;
+        padding: 0 0.5em;
+      }
+      .swal2-toast button:where(.swal2-styled) {
+        margin: 0.25em 0.5em;
+        padding: 0.4em 0.6em;
+        font-size: 1em;
+      }
+      .swal2-toast .swal2-success {
+        border-color: #a5dc86;
+      }
+      .swal2-toast .swal2-success [class^="swal2-success-circular-line"] {
+        position: absolute;
+        width: 1.6em;
+        height: 3em;
+        border-radius: 50%;
+      }
+      .swal2-toast
+        .swal2-success
+        [class^="swal2-success-circular-line"][class$="left"] {
+        top: -0.8em;
+        left: -0.5em;
+        transform: rotate(-45deg);
+        transform-origin: 2em 2em;
+        border-radius: 4em 0 0 4em;
+      }
+      .swal2-toast
+        .swal2-success
+        [class^="swal2-success-circular-line"][class$="right"] {
+        top: -0.25em;
+        left: 0.9375em;
+        transform-origin: 0 1.5em;
+        border-radius: 0 4em 4em 0;
+      }
+      .swal2-toast .swal2-success .swal2-success-ring {
+        width: 2em;
+        height: 2em;
+      }
+      .swal2-toast .swal2-success .swal2-success-fix {
+        top: 0;
+        left: 0.4375em;
+        width: 0.4375em;
+        height: 2.6875em;
+      }
+      .swal2-toast .swal2-success [class^="swal2-success-line"] {
+        height: 0.3125em;
+      }
+      .swal2-toast .swal2-success [class^="swal2-success-line"][class$="tip"] {
+        top: 1.125em;
+        left: 0.1875em;
+        width: 0.75em;
+      }
+      .swal2-toast .swal2-success [class^="swal2-success-line"][class$="long"] {
+        top: 0.9375em;
+        right: 0.1875em;
+        width: 1.375em;
+      }
+      @container swal2-popup style(--swal2-icon-animations:true) {
+        .swal2-toast .swal2-success.swal2-icon-show .swal2-success-line-tip {
+          animation: swal2-toast-animate-success-line-tip 0.75s;
+        }
+        .swal2-toast .swal2-success.swal2-icon-show .swal2-success-line-long {
+          animation: swal2-toast-animate-success-line-long 0.75s;
+        }
+      }
+      .swal2-toast.swal2-show {
+        animation: var(--swal2-toast-show-animation);
+      }
+      .swal2-toast.swal2-hide {
+        animation: var(--swal2-toast-hide-animation);
+      }
+      @keyframes swal2-show {
+        0% {
+          transform: translate3d(0, -50px, 0) scale(0.9);
+          opacity: 0;
+        }
+        100% {
+          transform: translate3d(0, 0, 0) scale(1);
+          opacity: 1;
+        }
+      }
+      @keyframes swal2-hide {
+        0% {
+          transform: translate3d(0, 0, 0) scale(1);
+          opacity: 1;
+        }
+        100% {
+          transform: translate3d(0, -50px, 0) scale(0.9);
+          opacity: 0;
+        }
+      }
+      @keyframes swal2-animate-success-line-tip {
+        0% {
+          top: 1.1875em;
+          left: 0.0625em;
+          width: 0;
+        }
+        54% {
+          top: 1.0625em;
+          left: 0.125em;
+          width: 0;
+        }
+        70% {
+          top: 2.1875em;
+          left: -0.375em;
+          width: 3.125em;
+        }
+        84% {
+          top: 3em;
+          left: 1.3125em;
+          width: 1.0625em;
+        }
+        100% {
+          top: 2.8125em;
+          left: 0.8125em;
+          width: 1.5625em;
+        }
+      }
+      @keyframes swal2-animate-success-line-long {
+        0% {
+          top: 3.375em;
+          right: 2.875em;
+          width: 0;
+        }
+        65% {
+          top: 3.375em;
+          right: 2.875em;
+          width: 0;
+        }
+        84% {
+          top: 2.1875em;
+          right: 0;
+          width: 3.4375em;
+        }
+        100% {
+          top: 2.375em;
+          right: 0.5em;
+          width: 2.9375em;
+        }
+      }
+      @keyframes swal2-rotate-success-circular-line {
+        0% {
+          transform: rotate(-45deg);
+        }
+        5% {
+          transform: rotate(-45deg);
+        }
+        12% {
+          transform: rotate(-405deg);
+        }
+        100% {
+          transform: rotate(-405deg);
+        }
+      }
+      @keyframes swal2-animate-error-x-mark {
+        0% {
+          margin-top: 1.625em;
+          transform: scale(0.4);
+          opacity: 0;
+        }
+        50% {
+          margin-top: 1.625em;
+          transform: scale(0.4);
+          opacity: 0;
+        }
+        80% {
+          margin-top: -0.375em;
+          transform: scale(1.15);
+        }
+        100% {
+          margin-top: 0;
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+      @keyframes swal2-animate-error-icon {
+        0% {
+          transform: rotateX(100deg);
+          opacity: 0;
+        }
+        100% {
+          transform: rotateX(0deg);
+          opacity: 1;
+        }
+      }
+      @keyframes swal2-rotate-loading {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes swal2-animate-question-mark {
+        0% {
+          transform: rotateY(-360deg);
+        }
+        100% {
+          transform: rotateY(0);
+        }
+      }
+      @keyframes swal2-animate-i-mark {
+        0% {
+          transform: rotateZ(45deg);
+          opacity: 0;
+        }
+        25% {
+          transform: rotateZ(-25deg);
+          opacity: 0.4;
+        }
+        50% {
+          transform: rotateZ(15deg);
+          opacity: 0.8;
+        }
+        75% {
+          transform: rotateZ(-5deg);
+          opacity: 1;
+        }
+        100% {
+          transform: rotateX(0);
+          opacity: 1;
+        }
+      }
+      @keyframes swal2-toast-show {
+        0% {
+          transform: translateY(-0.625em) rotateZ(2deg);
+        }
+        33% {
+          transform: translateY(0) rotateZ(-2deg);
+        }
+        66% {
+          transform: translateY(0.3125em) rotateZ(2deg);
+        }
+        100% {
+          transform: translateY(0) rotateZ(0deg);
+        }
+      }
+      @keyframes swal2-toast-hide {
+        100% {
+          transform: rotateZ(1deg);
+          opacity: 0;
+        }
+      }
+      @keyframes swal2-toast-animate-success-line-tip {
+        0% {
+          top: 0.5625em;
+          left: 0.0625em;
+          width: 0;
+        }
+        54% {
+          top: 0.125em;
+          left: 0.125em;
+          width: 0;
+        }
+        70% {
+          top: 0.625em;
+          left: -0.25em;
+          width: 1.625em;
+        }
+        84% {
+          top: 1.0625em;
+          left: 0.75em;
+          width: 0.5em;
+        }
+        100% {
+          top: 1.125em;
+          left: 0.1875em;
+          width: 0.75em;
+        }
+      }
+      @keyframes swal2-toast-animate-success-line-long {
+        0% {
+          top: 1.625em;
+          right: 1.375em;
+          width: 0;
+        }
+        65% {
+          top: 1.25em;
+          right: 0.9375em;
+          width: 0;
+        }
+        84% {
+          top: 0.9375em;
+          right: 0;
+          width: 1.125em;
+        }
+        100% {
+          top: 0.9375em;
+          right: 0.1875em;
+          width: 1.375em;
+        }
+      }
+    </style>
+  </head>
+  <body class="checkout" cz-shortcut-listen="true">
+    <div class="wrapper">
+      <div id="app">
+        <header class="order__header">
+          <div class="order__header_top">
+            <div class="container">
+              <span class="views-coll">12 others </span> are viewing this offer
+              right now <span class="timer" id="time">07:36</span>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row order__header_in">
+              <img
+                alt=""
+                src="/assets/images/logo2-strips.png"
+                width="165"
+              />
+              <div class="delivery-block">
+                Internet Exclusive Offers Available to USA Residents Only
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <div class="order">
+          <div class="container">
+            <div class="row">
+              <div class="order__left">
+                <div class="steps">
+                  <ul class="steps__list row">
+                    <li class="steps__item">1. Shipping Info</li>
+                    <li class="steps__item active">2. Finish Order</li>
+                    <li class="steps__item">3. Summary</li>
+                  </ul>
+                  <div class="approved-text">
+                    <strong
+                      ><span class="emphasis">APPROVED!</span> Free Bottle
+                      Packages Confirmed</strong
+                    >
+                  </div>
+                  <p>
+                    Limited supply available as of
+                    <span class="full-date date-container2"
+                      >Friday, 10/24/2025</span
+                    >. We currently have product <strong>in stock</strong> and
+                    ready to ship within 24 hours.
+                  </p>
+                  <p class="status-pr">Sell Out Risk: <span>HIGH</span></p>
+                </div>
+
+                <div class="product-selection">
+                  <div
+                    class="product product1 sel-prod active"
+                    data-pkg="5"
+                    data-price="199.99"
+                  >
+                    <div class="package-item">
+                      <div class="package-item__header">
+                        <div class="title-block">
+                          <span class="title-block__main"
+                            >BUY 3 GET 3 FREE*</span
+                          >
+                          <span class="title-block__retail"
+                            >Retail: <br /><span class="retail-price"
+                              >$69.99</span
+                            >/bottle</span
+                          >
+                        </div>
+                        <div class="shipping-row">
+                          <span>FREE SHIPPING</span>
+                        </div>
+                      </div>
+
+                      <div class="package-item__content">
+                        <div class="package-item__status">
+                          <span></span>
+                        </div>
+                        <div class="package-images">
+                          <div class="package-images__item">
+                            <img
+                              alt=""
+                              src="/assets/images/product.png"
+                              class="prod-btl1"
+                            />
+                            <img
+                              alt=""
+                              src="/assets/images/product.png"
+                              class="prod-btl2"
+                            />
+                            <img
+                              alt=""
+                              src="/assets/images/product.png"
+                              class="prod-btl3"
+                            />
+                          </div>
+                          <img
+                            alt=""
+                            src="/assets/images/plus-icon.png"
+                            class="chk-plus"
+                          />
+                          <div class="package-images__item">
+                            <img
+                              alt=""
+                              src="/assets/images/product.png"
+                              class="prod-btl4"
+                            />
+                            <img
+                              alt=""
+                              src="/assets/images/product.png"
+                              class="prod-btl5"
+                            />
+                            <img
+                              alt=""
+                              src="/assets/images/product.png"
+                              class="prod-btl4"
+                              style="left: 120px"
+                            />
+                          </div>
+
+                          <div class="package__save">
+                            <span class="package__save_title">SAVE</span>
+                            <span class="package__save_item save-price"
+                              >$149.97</span
+                            >
+                          </div>
+                        </div>
+                        <div class="package-info">
+                          <span class="package-info__title"
+                            >6 bottle - Mega <br />
+                            Discount Pack</span
+                          >
+                          <span class="package-info__subTitle">same as</span>
+                          <span class="package-info__price"
+                            ><p style="display: inline-block" class="price">
+                              $39.99
+                            </p>
+                            <span>/bottle</span></span
+                          >
+                          <span class="package-info__btn">Selected!</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="product product2 sel-prod"
+                    data-pkg="3"
+                    data-price="159.99"
+                  >
+                    <div class="package-item">
+                      <div class="package-item__header">
+                        <div class="title-block">
+                          <span class="title-block__main"
+                            >BUY 2 GET 2 FREE*</span
+                          >
+                          <span class="title-block__retail"
+                            >Retail: <br /><span class="retail-price"
+                              >$49.99</span
+                            >/bottle</span
+                          >
+                        </div>
+                        <div class="shipping-row">
+                          <span>FREE SHIPPING</span>
+                        </div>
+                      </div>
+
+                      <div class="package-item__content">
+                        <div class="package-item__status">
+                          <span></span>
+                        </div>
+                        <div class="package-images">
+                          <div class="package-images__item">
+                            <img
+                              alt=""
+                              src="/assets/images/product.png"
+                              class="prod-btl1"
+                            />
+                            <img
+                              alt=""
+                              src="/assets/images/product.png"
+                              class="prod-btl3"
+                            />
+                          </div>
+                          <img
+                            alt=""
+                            src="/assets/images/plus-icon.png"
+                            class="chk-plus"
+                            style="left: 132px"
+                          />
+                          <div class="package-images__item">
+                            <img
+                              alt=""
+                              src="/assets/images/product.png"
+                              class="prod-btl5"
+                              style="left: -18px"
+                            />
+                            <img
+                              alt=""
+                              src="/assets/images/product.png"
+                              class="prod-btl3"
+                              style="left: 30px"
+                            />
+                          </div>
+                          <div class="package__save">
+                            <span class="package__save_title">SAVE</span>
+                            <span class="package__save_item save-price"
+                              >$49.99</span
+                            >
+                          </div>
+                        </div>
+                        <div class="package-info">
+                          <span class="package-info__title"
+                            >4 bottle - Strong <br />
+                            Results Pack</span
+                          >
+                          <span class="package-info__subTitle">same as</span>
+                          <span class="package-info__price"
+                            ><p style="display: inline-block" class="price">
+                              $47.49
+                            </p>
+                            <span>/bottle</span></span
+                          >
+                          <span class="package-info__btn">Select Package</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="product product3 sel-prod"
+                    data-pkg="1"
+                    data-price="69.99"
+                  >
+                    <div class="package-item">
+                      <div class="package-item__header">
+                        <div class="title-block">
+                          <span class="title-block__main"
+                            >BUY 1 GET 1 FREE*</span
+                          >
+                          <span class="title-block__retail"
+                            >Retail: <br /><span class="retail-price"
+                              >$69.99</span
+                            >/bottle</span
+                          >
+                        </div>
+                        <div class="shipping-row">
+                          <span>FREE SHIPPING</span>
+                        </div>
+                      </div>
+
+                      <div class="package-item__content">
+                        <div class="package-item__status">
+                          <span></span>
+                        </div>
+                        <div class="package-images">
+                          <div class="package-images__item">
+                            <img
+                              alt=""
+                              src="/assets/images/product.png"
+                              class="prod-btl1"
+                            />
+                          </div>
+                          <img
+                            alt=""
+                            src="/assets/images/plus-icon.png"
+                            class="chk-plus"
+                            style="left: 132px"
+                          />
+                          <div class="package-images__item">
+                            <img
+                              alt=""
+                              src="/assets/images/product.png"
+                              class="prod-btl5"
+                              style="left: -18px"
+                            />
+                          </div>
+                        </div>
+                        <div class="package-info">
+                          <span class="package-info__title"
+                            >1 bottle - Quick <br />
+                            Results Pack!</span
+                          >
+                          <span class="package-info__subTitle">&nbsp;</span>
+                          <span class="package-info__price"
+                            ><p style="display: inline-block" class="price">
+                              $64.99
+                            </p>
+                            <span>/bottle</span></span
+                          >
+                          <span class="package-info__btn">Select Package</span>
+                        </div>
+                      </div>
+                    </div>
+                    <span class="footnote">* at retail price</span>
+                  </div>
+
+                  <img
+                    class="img-responsive secure-icons"
+                    src="/assets/images/or-secureicons.jpg"
+                  />
+                  <div class="guarantee-block">
+                    <div class="guarantee-top">30 day money back guarantee</div>
+                    <div class="guarantee-content">
+                      <img
+                        alt=""
+                        class="guarantee-icon"
+                        src="/assets/images/guarantee-ico.jpg"
+                      />
+                      <div class="guarantee-text">
+                        <p>
+                          We are so confident in our products and services, that
+                          we back it with a 30 day money back guarantee. If for
+                          any reason you are not fully satisfied with our
+                          products, simply return the purchased products in the
+                          original container within 30 days of when you received
+                          your order. We will refund you 100% of the purchase
+                          price - with absolutely no hassle.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="line-block">
+                    <div class="line">
+                      <div class="text-center">
+                        HURRY! CONFIRM YOUR ORDER NOW!
+                      </div>
+                    </div>
+                    <div class="arrow"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="order__right">
+                <div class="form__header">
+                  <h2>FINAL STEP:</h2>
+                  <h3>PAYMENT INFORMATION</h3>
+                </div>
+                <div class="form__in">
+                  <span class="accept-text">We Accept:</span>
+                  <ul class="form__cards">
+                    <li><img alt="" src="/assets/images/visa.png" /></li>
+                    <li>
+                      <img alt="" src="/assets/images/mastercard.png" />
+                    </li>
+                  </ul>
+                  <form
+                    class="form-popup"
+                    id="checkout"
+                    onsubmit="return submit_form()"
+                  >
+                    <input
+                      type="hidden"
+                      name="token"
+                      value="cd5d8668064e82464e46fd07ce2dd9236518c76d8013761e4812799cc24028f7"
+                    />
+                    <input
+                      type="hidden"
+                      name="package"
+                      value="5"
+                      id="package"
+                    />
+                    <input
+                      type="hidden"
+                      name="fields_prospect_id"
+                      value="AF9B451200"
+                    />
+                    <input type="hidden" name="fields_cc_type" value="" />
+                    <input type="hidden" name="device" value="desktop" />
+                    <input
+                      type="hidden"
+                      name="iscreditcardPasted"
+                      id="iscreditcardPasted"
+                      value="0"
+                    />
+
+                    <label
+                      for="payment_as_shipping"
+                      class="payment_as_shipping_label"
+                    >
+                      <input
+                        type="checkbox"
+                        name=""
+                        id="billing_is_shipping"
+                        checked=""
+                        class="chkbox bill-inp"
+                      />
+                      <span>Billing same as Shipping</span>
+                    </label>
+
+                    <div class="billing-info" style="display: none">
+                      <div class="billing-form">
+                        <span class="billing-title">Billing Info</span>
+                        <div class="form-holder">
+                          <span>First Name: </span>
+                          <input
+                            type="text"
+                            name="billingFirstName"
+                            id="firstName"
+                            placeholder="First Name"
+                            class="form-control required"
+                          />
+                        </div>
+                        <div class="form-holder" placeholder="Last Name*">
+                          <span>Last Name: </span>
+                          <input
+                            type="text"
+                            name="billingLastName"
+                            id="lastName"
+                            placeholder="Last Name"
+                            class="form-control required"
+                          />
+                        </div>
+                        <div class="phone-12 columns">
+                          <label>Country:</label>
+                        </div>
+                        <div class="form-holder">
+                          <select
+                            name="country"
+                            placeholder="Country"
+                            class="form-control"
+                          >
+                            <option value="US">US</option>
+                          </select>
+                        </div>
+                        <div class="phone-12 columns">
+                          <label>State/Region:</label>
+                        </div>
+                        <select
+                          name="state"
+                          id="billingState"
+                          class="form-control required"
+                        >
+                          <option value="" onclick="" selected="">
+                            Select Billing State
+                          </option>
+                          <option value="AL">Alabama (AL)</option>
+                          <option value="AK">Alaska (AK)</option>
+                          <option value="AS">American Samoa (AS)</option>
+                          <option value="AZ">Arizona (AZ)</option>
+                          <option value="AR">Arkansas (AR)</option>
+                          <option value="AE">Armed Forces (AE)</option>
+                          <option value="AA">Armed Forces Americas (AA)</option>
+                          <option value="AP">Armed Forces Pacific (AP)</option>
+                          <option value="CA">California (CA)</option>
+                          <option value="CO">Colorado (CO)</option>
+                          <option value="CT">Connecticut (CT)</option>
+                          <option value="DE">Delaware (DE)</option>
+                          <option value="DC">District of Columbia (DC)</option>
+                          <option value="FM">
+                            Federated States of Micronesia (FM)
+                          </option>
+                          <option value="FL">Florida (FL)</option>
+                          <option value="GA">Georgia (GA)</option>
+                          <option value="GU">Guam (GU)</option>
+                          <option value="HI">Hawaii (HI)</option>
+                          <option value="ID">Idaho (ID)</option>
+                          <option value="IL">Illinois (IL)</option>
+                          <option value="IN">Indiana (IN)</option>
+                          <option value="IA">Iowa (IA)</option>
+                          <option value="KS">Kansas (KS)</option>
+                          <option value="KY">Kentucky (KY)</option>
+                          <option value="LA">Louisiana (LA)</option>
+                          <option value="ME">Maine (ME)</option>
+                          <option value="MD">Maryland (MD)</option>
+                          <option value="MA">Massachusetts (MA)</option>
+                          <option value="MI">Michigan (MI)</option>
+                          <option value="MN">Minnesota (MN)</option>
+                          <option value="MS">Mississippi (MS)</option>
+                          <option value="MO">Missouri (MO)</option>
+                          <option value="MT">Montana (MT)</option>
+                          <option value="NE">Nebraska (NE)</option>
+                          <option value="NV">Nevada (NV)</option>
+                          <option value="NH">New Hampshire (NH)</option>
+                          <option value="NJ">New Jersey (NJ)</option>
+                          <option value="NM">New Mexico (NM)</option>
+                          <option value="NY">New York (NY)</option>
+                          <option value="NC">North Carolina (NC)</option>
+                          <option value="ND">North Dakota (ND)</option>
+                          <option value="MP">
+                            Northern Mariana Islands (MP)
+                          </option>
+                          <option value="OH">Ohio (OH)</option>
+                          <option value="OK">Oklahoma (OK)</option>
+                          <option value="OR">Oregon (OR)</option>
+                          <option value="PA">Pennsylvania (PA)</option>
+                          <option value="PR">Puerto Rico (PR)</option>
+                          <option value="MH">
+                            Republic of Marshall Islands (MH)
+                          </option>
+                          <option value="RI">Rhode Island (RI)</option>
+                          <option value="SC">South Carolina (SC)</option>
+                          <option value="SD">South Dakota (SD)</option>
+                          <option value="TN">Tennessee (TN)</option>
+                          <option value="TX">Texas (TX)</option>
+                          <option value="UT">Utah (UT)</option>
+                          <option value="VT">Vermont (VT)</option>
+                          <option value="VI">
+                            Virgin Islands of the U.S. (VI)
+                          </option>
+                          <option value="VA">Virginia (VA)</option>
+                          <option value="WA">Washington (WA)</option>
+                          <option value="WV">West Virginia (WV)</option>
+                          <option value="WI">Wisconsin (WI)</option>
+                          <option value="WY">Wyoming (WY)</option>
+                        </select>
+                        <div class="phone-12 columns">
+                          <label>Address:</label>
+                        </div>
+                        <div
+                          id="billingAddress"
+                          class="form-holder"
+                          placeholder="Enter your street address (ex: 123 street)"
+                        >
+                          <input
+                            type="text"
+                            name="billingAddress1"
+                            id="billingAddress1"
+                            placeholder="Address"
+                            class="form-control required"
+                          />
+                        </div>
+                        <div class="phone-12 columns">
+                          <label>City:</label>
+                        </div>
+                        <div class="form-holder" placeholder="City*">
+                          <input
+                            type="text"
+                            name="billingCity"
+                            id="billingCity"
+                            placeholder="City"
+                            class="form-control required"
+                          />
+                        </div>
+                        <div class="phone-12 columns">
+                          <label>Zip Code:</label>
+                        </div>
+                        <div id="billingZipCode" class="form-holder">
+                          <input
+                            type="text"
+                            name="billingZip"
+                            id="billingZip"
+                            placeholder="Zip Code"
+                            class="form-control required"
+                            minlength="5"
+                            maxlength="5"
+                            onkeyup="javascript: this.value = this.value.replace(/[^0-9]/g, '');"
+                          />
+                        </div>
+                        <span class="billing-title">Payment Info</span>
+                      </div>
+                    </div>
+
+                    <div class="margin-bottom-5">
+                      <div class="phone-12 columns">
+                        <label>Card Number:</label>
+                      </div>
+                    </div>
+
+                    <div class="phone-12 columns form-holder">
+                      <input
+                        type="tel"
+                        name="fields_cc_number"
+                        id="cardNumber"
+                        data-threeds="pan"
+                        class="form-control required masked"
+                        placeholder="Card Number"
+                        maxlength="20"
+                        autocomplete="off"
+                      />
+                      <div class="accept-icon"></div>
+                    </div>
+
+                    <div class="row margin-bottom-5">
+                      <div class="phone-12 columns">
+                        <label>Card Expiry Date:</label>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="phone-6 columns form-holder">
+                        <select
+                          name="fields_expmonth"
+                          data-threeds="month"
+                          id="fields_expmonth"
+                          class="required form-control"
+                          autocomplete="off"
+                          data-error-message="Please select a valid expiry month!"
+                        >
+                          <option value="">Month</option>
+                          <option value="01">01 - January</option>
+                          <option value="02">02 - February</option>
+                          <option value="03">03 - March</option>
+                          <option value="04">04 - April</option>
+                          <option value="05">05 - May</option>
+                          <option value="06">06 - June</option>
+                          <option value="07">07 - July</option>
+                          <option value="08">08 - August</option>
+                          <option value="09">09 - September</option>
+                          <option value="10">10 - October</option>
+                          <option value="11">11 - November</option>
+                          <option value="12">12 - December</option>
+                        </select>
+                      </div>
+
+                      <div class="phone-6 columns form-holder">
+                        <select
+                          name="fields_expyear"
+                          data-threeds="year"
+                          id="fields_expyear"
+                          class="required form-control"
+                          autocomplete="off"
+                          data-error-message="Please select a valid expiry year!"
+                        >
+                          <option value="">Year</option>
+                          <option value="22">2022</option>
+                          <option value="23">2023</option>
+                          <option value="24">2024</option>
+                          <option value="25">2025</option>
+                          <option value="26">2026</option>
+                          <option value="27">2027</option>
+                          <option value="28">2028</option>
+                          <option value="29">2029</option>
+                          <option value="30">2030</option>
+                          <option value="31">2031</option>
+                          <option value="32">2032</option>
+                          <option value="33">2033</option>
+                          <option value="34">2034</option>
+                          <option value="35">2035</option>
+                          <option value="36">2036</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="row margin-bottom-5">
+                      <div class="phone-12 columns">
+                        <label>CVV:</label>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="phone-6 columns form-holder">
+                        <input
+                          type="tel"
+                          name="fields_cvv"
+                          id="cc_cvv"
+                          class="form-control fcheckout-field required"
+                          data-validate="cvv"
+                          maxlength="4"
+                          placeholder="CVV"
+                          autocomplete="off"
+                          data-error-message="Please enter a valid CVV code!"
+                          onkeyup="javascript: this.value = this.value.replace(/[^0-9]/g, '');"
+                        />
+                      </div>
+                      <div class="phone-6 columns">
+                        <span class="cvv-link">
+                          <a
+                            class="ccvwhatsthis form-link cvvbox"
+                            href="javascript:void(0)"
+                            style="margin: 9px 0px 0px 2px"
+                          >
+                            Where can I find my Security Code?</a
+                          >
+                        </span>
+                      </div>
+                    </div>
+
+                    <div class="cvv-image clear" style="display: none">
+                      <img alt="" src="/assets/images/cvv-image.png" />
+                    </div>
+                    <div class="clear"></div>
+                    <div class="form__footer">
+                      <div class="secure-icon">
+                        <span>Secure 256-bit SSL Encryption</span>
+                      </div>
+                      <button class="send-btn loading-btn" type="submit">
+                        <span>RUSH MY ORDER!</span>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="footer">
+          <div class="container">
+            <p class="footer_pj">Our Promises and Assurances to You</p>
+            <ul class="footer-part row">
+              <li>
+                <div class="footer-part__img">
+                  <img alt="" src="/assets/images/secured-by.png" />
+                </div>
+                <p>
+                  Highest Security Levels for Online Transactions 256 bit
+                  Encryption.
+                </p>
+              </li>
+              <li>
+                <div class="footer-part__img">
+                  <img alt="" src="/assets/images/symantec.png" />
+                </div>
+                <p>Your Privacy Protected Rest Assured.</p>
+              </li>
+              <li>
+                <div class="footer-part__img">
+                  <img
+                    alt=""
+                    src="/assets/images/satisfaction-seal.png"
+                  />
+                </div>
+                <p>100% Consumer Satisfaction Guaranteed.</p>
+              </li>
+              <li>
+                <div class="footer-part__img">
+                  <img
+                    alt=""
+                    src="/assets/images/customer-service-seal.png"
+                  />
+                </div>
+                <p>Award Winning Customer Service.</p>
+              </li>
+            </ul>
+
+            <p>
+              We are committed to maintaining the highest quality products and
+              the utmost integrity in business practices. All products sold on
+              this website are certified by Good Manufacturing Practices (GMP),
+              which is the highest standard of testing in the supplement
+              industry.
+            </p>
+            <p>
+              Notice: The products and information found on this site are not
+              intended to replace professional medical advice or treatment.
+              These statements have not been evaluated by the Food and Drug
+              Administration. These products are not intended to diagnose,
+              treat, cure or prevent any disease. Individual results may vary.
+            </p>
+            <p>
+              ©
+              <script>
+                var date = new Date();
+                document.write(date.getFullYear());
+              </script>
+              2025 . All Rights Reserved.
+            </p>
+
+            <ul class="terms-links">
+              <li>
+                <a
+                  href="javascript:void(0);"
+                  onclick="openNewWindow('disclosures/privacy.php','modal');"
+                  >Privacy Policy |</a
+                >
+              </li>
+              <li>
+                <a
+                  href="javascript:void(0);"
+                  onclick="openNewWindow('disclosures/terms.php','modal');"
+                  >Terms and Conditions |</a
+                >
+              </li>
+              <li>
+                <a
+                  href="javascript:void(0);"
+                  onclick="openNewWindow('disclosures/wireless.php','modal');"
+                  >Wireless Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <section class="custom-social-proof" style="display: none">
+      <div class="custom-notification">
+        <div class="custom-notification-container">
+          <div class="custom-notification-image-wrapper">
+            <img src="/assets/images/product.png" />
+          </div>
+          <div class="custom-notification-content-wrapper">
+            <p class="custom-notification-content">
+              <span id="notify-customer">Vincent H</span>. -
+              <span id="notify-state">NM</span><br />
+              Purchased
+              <strong><span id="notify-quantity">4</span></strong> Bottle(s) of
+              Xtreme Surge
+              <small><span id="notify-ago">1 minutes ago</span></small>
+            </p>
+          </div>
+        </div>
+        <div class="custom-close"></div>
+      </div>
+    </section>
+
+    <div class="popup-loading-wrapper" style="display: none">
+      <div class="popup">
+        <figure class="product-image"></figure>
+        <p>Reserving Your Bottle Of</p>
+        <h2>Xtreme Surge</h2>
+        <img
+          src="/assets/images/icon-loading.png"
+          alt=""
+          class="loading-image"
+        />
+      </div>
+    </div>
+
+    <div class="loading-screen" style="display: none">
+      <div class="loading-pop">
+        <div class="pop-content">
+          <!-- <img src="/assets/images/loading.gif" class="loading-img"> -->
+          <ul class="pop-list">
+            <li class="show-1">
+              <img src="/assets/images/pop-tik.png" /> Checking Inventory
+            </li>
+            <li class="show-2">
+              <img src="/assets/images/pop-tik.png" /> Processing
+              Transaction
+            </li>
+            <li class="show-3">
+              <img src="/assets/images/pop-tik.png" /> Sending to
+              Fulfillment
+            </li>
+            <li class="show-4">
+              <img src="/assets/images/pop-tik.png" /> Order Confirmed
+            </li>
+          </ul>
+          <div id="grp-progress">
+            <div id="progress-bar">
+              <div id="text_bar"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--partial pixels-->
+    <iframe
+      src="https://gtmorepcs.com/p.ashx?o=17770&amp;e=2072&amp;r="
+      height="1"
+      width="1"
+      frameborder="0"
+    ></iframe>
+
+    <script
+      type="text/javascript"
+      src="/us-z1/assets3/js/jquery-3.7.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/us-z1/assets3/js/social-proof.js?v=1"
+    ></script>
+    <script type="text/javascript" src="/us-z1/assets3/js/scripts.js"></script>
+    <script
+      type="text/javascript"
+      src="/us-z1/assets3/js/jquery.mask.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/us-z1/assets3/js/jquery.cardtype.js"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+      .error-card {
+        border: 1px solid red !important;
+      }
+      .send-btn:disabled,
+      .btn_pulse:disabled {
+        background-color: #95a5a6;
+        background-image: unset !important;
+      }
+      .send-btn:disabled:hover,
+      .btn_pulse:disabled:hover {
+        background-color: #7f8c8d !important;
+        background-image: unset !important;
+        cursor: not-allowed;
+      }
+    </style>
+    <script>
+      $("#cardNumber").keyup(function () {
+        var result = $(this).validateCreditCard();
+        $(".send-btn").attr("disabled", false);
+        $(".btn_pulse").attr("disabled", false);
+        $(this).removeClass("error-card");
+        var cardNumber = $(this).val();
+
+        if (cardNumber.length < 18) {
+          $(".send-btn").attr("disabled", true);
+          $(".btn_pulse").attr("disabled", true);
+          $(this).addClass("error-card");
+        }
+        if (result) {
+          var card = result.card_type.name;
+          card = card.replace("mastercard", "master");
+          $("input[name=fields_cc_type]").val(card);
+        }
+        if (
+          card &&
+          (card == "amex" || card == "discover") &&
+          cardNumber.length >= 18
+        ) {
+          $(".send-btn").attr("disabled", true);
+          $(".btn_pulse").attr("disabled", true);
+          $(this).addClass("error-card");
+          Swal.fire({
+            position: "center",
+            icon: "error",
+            title: "This card is not supported",
+            text: "Sorry, but we don't currently support Amex or Discover cards.",
+            footer: "Please try a different card",
+            showConfirmButton: true,
+            timer: 2500,
+          });
+        }
+      });
+
+      $("#billing_is_shipping").on("click", function () {
+        if ($(this).prop("checked")) {
+          $(".billing-info").css("display", "none");
+        } else {
+          $(".billing-info").css("display", "block");
+        }
+      });
+    </script>
+
+    <script>
+      // Iterate product selection
+      var selectButtons = $(".package-info__btn");
+      $(".product-selection > .product").click(function () {
+        // Update package selected
+        $(".active").removeClass("active");
+        $(this).addClass("active");
+
+        // Update hidden field
+        $("input[name=package]").val($(this).data("pkg"));
+        //$("#x_amount").val($(this).data('price'));
+
+        // Update button text
+        var parentElement = this;
+        selectButtons.each(function (i) {
+          if ($.contains(parentElement, this)) {
+            $(this).text("Selected!");
+          } else {
+            $(this).text("Select Package");
+          }
+        });
+      });
+    </script>
+
+    <script>
+      function submit_form() {
+        $("#proc_popup").show();
+
+        var errors = new Array();
+
+        if (!$("#payment_as_shipping").prop("checked")) {
+          // Validate billing fields
+        }
+
+        // Check CC #
+        if ($("#cardNumber").val() === "") {
+          errors.push("Please enter a credit card number.");
+        } else {
+          /*
+					var valid = LuhnAlgorithm($('#cardNumber').unmask().val());
+					
+					if (!valid) {
+						errors.push("Invalid credit card number.");
+					}
+					*/
+        }
+
+        if ($("#cardMonth").val() === "" || $("#cardMonth").val() === "Month") {
+          errors.push("Please enter a valid expiration month.");
+        }
+
+        if ($("#cardYear").val() === "" || $("#cardYear").val() === "Year") {
+          errors.push("Please enter a valid expiration year.");
+        }
+
+        if ($("#cardSecurityCode").val() === "") {
+          errors.push("Please enter a CVV code.");
+        }
+
+        if (errors.length == 0) {
+          $(
+            ".loading-screen .show-1, .loading-screen .show-2, .loading-screen .show-3, .loading-screen .show-4"
+          ).removeClass("active");
+          $(".loading-screen").show();
+
+          setTimeout(function () {
+            $(".loading-screen .show-1").addClass("active");
+          }, 500);
+
+          setTimeout(function () {
+            $(".loading-screen .show-2").addClass("active");
+          }, 2000);
+
+          setTimeout(function () {
+            $(".loading-screen .show-3").addClass("active");
+          }, 3000);
+
+          var data = $("#checkout :input[value!=''][value!='.']").serialize();
+
+          $.ajax({
+            type: "POST",
+            url: "./app/src/create_order.php",
+            data: data,
+            success: function (result) {
+              var response = result.split("|");
+
+              if (response[0] == "ok") {
+                window.location.href = "./upsell.php" + response[1];
+              } else {
+                $(".loading-screen").hide();
+                popErrorModal(response[1]);
+              }
+            },
+            error: function () {
+              $(".loading-screen").hide();
+            },
+          });
+
+          $("#cardNumber").mask("0000 0000 0000 0000");
+
+          return false;
+        } else {
+          $("#cardNumber").mask("0000 0000 0000 0000");
+
+          var li = "";
+          $.each(errors, function (key, value) {
+            li += "<li>" + value + "</li>";
+          });
+
+          var html = "";
+          html += '<div id="error_handler_overlay">';
+          html +=
+            '<div class="error_handler_body"><a href="javascript:void(0);" id="error_handler_overlay_close">X</a><ul>' +
+            li +
+            "</ul></div>";
+          html += "</div>";
+
+          $("body").append(html);
+          $("#proc_popup").hide();
+
+          $("#error_handler_overlay").fadeIn(500);
+          return false;
+        }
+
+        return false;
+      }
+
+      function popErrorModal(errors) {
+        var li = "";
+
+        if (errors == "Order is already completed") {
+          li = "<li>" + errors + "</li>";
+        } else if (typeof errors === "string") {
+          li = "<li>" + errors + "</li>";
+        } else {
+          $.each(errors, function (key, value) {
+            li += "<li>" + value + "</li>";
+          });
+        }
+
+        var html = "";
+        html += '<div id="error_handler_overlay">';
+        html +=
+          '<div class="error_handler_body"><a href="javascript:void(0);" id="error_handler_overlay_close">X</a><ul>' +
+          li +
+          "</ul></div>";
+        html += "</div>";
+
+        $("body").append(html);
+        $("#proc_popup").hide();
+
+        $("#error_handler_overlay").fadeIn(500);
+        return false;
+      }
+
+      function LuhnAlgorithm(num) {
+        /*
+			    var inputNum = num.toString();
+			    var sum = 0;
+			    var doubleUp = false;
+
+			    for (var i = inputNum.length - 1; i >= 0; i--)
+			    {
+			        var curDigit = parseInt(inputNum.charAt(i));
+
+			        if(doubleUp)
+			        {
+								if((curDigit*2) > 9)
+			            {
+			              sum +=( curDigit*2)-9;
+			            }
+			            else
+			            {
+			              sum += curDigit*2;
+			            }
+			        }
+			        else
+			        {
+			          sum += curDigit;
+			        }
+			        var doubleUp =!doubleUp
+			    }
+
+					return (sum % 10) == 0  ? true : false;
+				*/
+        return true;
+      }
+    </script>
+
+    <script>
+      jQuery(function ($) {
+        $(".cvv-link").click(function () {
+          $(".cvv-image").show();
+        });
+      });
+
+      $(window).on("load", function () {
+        var $preloader = $("#preloader");
+        var $preloader2 = $("#popup-loading-wrapper2");
+        $preloader.delay(500).fadeOut("slow");
+        $preloader2.delay(500).fadeOut("slow");
+      });
+
+      $(function () {
+        $(window).keydown(function (e) {
+          if (e.which === 27 && $("#error_handler_overlay").length) {
+            $("#error_handler_overlay").remove();
+          }
+        });
+
+        $(document).off("click", "#error_handler_overlay");
+        $(document).on("click", "#error_handler_overlay", function () {
+          $(this).remove();
+        });
+
+        $(document).off("click", "#error_handler_overlay_close");
+        $(document).on("click", "#error_handler_overlay_close", function () {
+          $("#error_handler_overlay").remove();
+        });
+
+        $(document).on("click", "#app_common_modal_close", function () {
+          //     alert('close');
+          $("#app_common_modal").remove();
+        });
+      });
+
+      $(document).ready(function () {
+        $("#cardNumber").mask("0000 0000 0000 0000");
+      });
+    </script>
+
+    <script>
+      $("#payment_as_shipping").click(function () {
+        if (this.checked) {
+          $(".billing-info").hide();
+          $("#billShipSame").val("on");
+        } else {
+          $(".billing-info").show();
+          $("#billShipSame").val("off");
+        }
+      });
+    </script>
+
+    <script>
+      function onlyNumbers(e, type) {
+        var keynum;
+        var keychar;
+        var numcheck;
+        if (window.event) {
+          // IE
+          keynum = e.keyCode;
+        } else if (e.which) {
+          // Netscape/Firefox/Opera
+          keynum = e.which;
+        }
+        keychar = String.fromCharCode(keynum);
+        numcheck = /\d/;
+
+        switch (keynum) {
+          case 8: //backspace
+          case 9: //tab
+          case 35: //end
+          case 36: //home
+          case 37: //left arrow
+          case 38: //right arrow
+          case 39: //insert
+          case 45: //delete
+          case 46: //0
+          case 48: //1
+          case 49: //2
+          case 50: //3
+          case 51: //4
+          case 52: //5
+          case 54: //6
+          case 55: //7
+          case 56: //8
+          case 57: //9
+          case 96: //0
+          case 97: //1
+          case 98: //2
+          case 99: //3
+          case 100: //4
+          case 101: //5
+          case 102: //6
+          case 103: //7
+          case 104: //8
+          case 105: //9
+            result2 = true;
+            break;
+          case 109: // dash -
+            if (type == "phone") {
+              result2 = true;
+            } else {
+              result2 = false;
+            }
+            break;
+          default:
+            result2 = numcheck.test(keychar);
+            break;
+        }
+
+        return result2;
+      }
+
+      function openNewWindow(
+        page_url,
+        type,
+        window_name,
+        width,
+        height,
+        top,
+        left,
+        features
+      ) {
+        if (!type) {
+          type = "popup";
+        }
+
+        if (!width) {
+          width = 480;
+        }
+
+        if (!height) {
+          height = 480;
+        }
+
+        if (!top) {
+          top = 50;
+        }
+
+        if (!left) {
+          left = 50;
+        }
+
+        if (!features) {
+          features = "resizable,scrollbars";
+        }
+
+        if (type == "popup") {
+          var settings = "height=" + height + ",";
+          settings += "width=" + width + ",";
+          settings += "top=" + top + ",";
+          settings += "left=" + left + ",";
+          settings += features;
+
+          win = window.open(page_url, window_name, settings);
+          win.window.focus();
+        } else if (type == "modal") {
+          var html = "";
+          html += '<div id="app_common_modal">';
+          html +=
+            '<div class="app_modal_body"><a href="javascript:void(0);" id="app_common_modal_close">X</a><iframe src="' +
+            page_url +
+            '" frameborder="0"></iframe></div>';
+          html += "</div>";
+
+          if (!$("#app_common_modal").length) {
+            $("body").append(html);
+          }
+          $("#app_common_modal").fadeIn();
+        }
+      }
+    </script>
+
+    <script type="text/javascript">
+      function GetCardType(number) {
+        // visa
+        var re = new RegExp("^4");
+        if (number.match(re) != null) return "visa";
+
+        // Mastercard
+        // Updated for Mastercard 2017 BINs expansion
+        if (
+          /^(5[1-5][0-9]{14}|2(22[1-9][0-9]{12}|2[3-9][0-9]{13}|[3-6][0-9]{14}|7[0-1][0-9]{13}|720[0-9]{12}))$/.test(
+            number
+          )
+        )
+          return "master";
+
+        // AMEX
+        re = new RegExp("^3[47]");
+        if (number.match(re) != null) return "amex";
+
+        // Discover
+        re = new RegExp(
+          "^(6011|622(12[6-9]|1[3-9][0-9]|[2-8][0-9]{2}|9[0-1][0-9]|92[0-5]|64[4-9])|65)"
+        );
+        if (number.match(re) != null) return "discover";
+
+        // Diners
+        re = new RegExp("^36");
+        if (number.match(re) != null) return "diners";
+
+        // Diners - Carte Blanche
+        re = new RegExp("^30[0-5]");
+        if (number.match(re) != null) return "diners";
+
+        // JCB
+        re = new RegExp("^35(2[89]|[3-8][0-9])");
+        if (number.match(re) != null) return "jcb";
+
+        // Visa Electron
+        re = new RegExp("^(4026|417500|4508|4844|491(3|7))");
+        if (number.match(re) != null) return "none";
+
+        return "";
+      }
+    </script>
+
+    <script src="https://cdn.3dsintegrator.com/threeds.2.min.latest.js"></script>
+    <script>
+      var tds = new ThreeDS(
+        "checkout",
+        "466fc6ab1f21ddc5080cfbb1e8aac3e0",
+        null,
+        {
+          endpoint: "https://api.3dsintegrator.com/v2",
+          autoSubmit: false,
+          verbose: true,
+        }
+      );
+
+      var tds_rebill = new ThreeDS(
+        "checkout",
+        "466fc6ab1f21ddc5080cfbb1e8aac3e0",
+        null,
+        {
+          endpoint: "https://api.3dsintegrator.com/v2",
+          autoSubmit: false,
+          verbose: true,
+        }
+      );
+
+      function get_3ds_tokens() {
+        console.log("3ds verify!");
+
+        tds.verify(
+          function (response) {
+            console.log("Accepted");
+            console.log(response);
+          },
+          function (reject) {
+            console.log("Rejected");
+            console.log(reject);
+          },
+          { amount: 20 }
+        );
+
+        tds_rebill.verify(
+          function (response) {
+            console.log("Accepted");
+            console.log(response);
+          },
+          function (reject) {
+            console.log("Rejected");
+            console.log(reject);
+          },
+          { amount: 20 }
+        );
+      }
+
+      function protectInput(field) {
+        let typed = false;
+        let iscreditCardFillupByPaste = false;
+
+        field.addEventListener("keydown", () => (typed = true));
+
+        field.addEventListener("change", () => {
+          if (this.value != "" && (!typed || iscreditCardFillupByPaste)) {
+            $("#iscreditcardPasted").val(1);
+            console.log("pasted on ");
+          }
+        });
+        field.addEventListener(
+          "paste",
+          () => (iscreditCardFillupByPaste = true)
+        );
+      }
+
+      document.querySelectorAll("#cardNumber").forEach(protectInput);
+    </script>
+    <!--
+	<script>
+	  var tds = new ThreeDS(
+	    "checkout",
+	    "466fc6ab1f21ddc5080cfbb1e8aac3e0",
+	    null,
+	    {
+	      endpoint: "https://api.3dsintegrator.com/v2",
+	      verbose: true,
+				/*
+				resolve(data) {
+					console.log(this);
+					console.log(data);
+					$('input[name=authenticationValue]').val(data.authenticationValue);
+					$('input[name=dsTransactionId]').val(data.dsTransId);
+					$('input[name=eci]').val(data.eci);
+					$('input[name=protocolVersion]').val(data.protocolVersion);
+					$('input[name=status]').val(data.status);
+	      },
+				*/
+				addResultToForm: true,
+				rebill: 199.99,
+				rebillSubmitDelay: 0
+	    });
+	</script>
+	-->
+  </body>
+</html>
