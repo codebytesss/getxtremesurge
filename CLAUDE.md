@@ -147,3 +147,4 @@ Then open: `http://localhost:8000/index.html`
 **Shared Elements:**
 - Logo: `/new_assets3/images/logo.png` (favicon)
 - Both pages use Open Sans from Google Fonts
+- important: just reponse me shortly every time maybe one line or one word not longer that two lines

@@ -1,0 +1,808 @@
+@charset "utf-8";
+
+/* ========================================
+   RESET & BASE
+   ======================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #000;
+  font-size: 16px;
+  line-height: 1.5;
+  background: #f0f8ff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ========================================
+   TOP WARNING BAR
+   ======================================== */
+
+.tophdr {
+  background: #ff0000;
+  padding: 8px 0;
+  text-align: center;
+}
+
+.hdrtxt {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.hdrtxt span {
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+/* ========================================
+   SECTION 1: HERO SECTION
+   ======================================== */
+
+#section1 {
+  position: relative;
+  min-height: 800px;
+  background: #fafdfd;
+  overflow: hidden;
+}
+
+/* Map Background - Full Width */
+.map-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/index-page/map-background.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.sec1inner {
+  position: relative;
+  z-index: 2;
+  padding: 40px 0;
+}
+
+.contentWrap {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 10px;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+/* ========================================
+   LEFT COLUMN: Couple + Bottles
+   ======================================== */
+
+.left-column {
+  flex: 0 0 550px;
+  position: relative;
+  padding-right: 0;
+  min-height: 700px;
+  overflow: visible;
+}
+
+.couple-container {
+  position: absolute;
+  top: 0;
+  left: -100px;
+  z-index: 1;
+}
+
+.couple-image {
+  width: 850px;
+  height: auto;
+  display: block;
+}
+
+.bottles-container {
+  position: absolute;
+  bottom: 300px;
+  right: -50px;
+  width: 450px;
+  height: auto;
+  z-index: 5;
+}
+
+.bottle {
+  position: absolute;
+  width: 220px;
+  height: auto;
+}
+
+.bottle-1 {
+  left: 0;
+  top: 20px;
+  z-index: 2;
+}
+
+.bottle-2 {
+  left: 180px;
+  top: 0;
+  z-index: 3;
+}
+
+.usa-seal {
+  position: absolute;
+  left: -100px;
+  bottom: 0px;
+  width: 180px;
+  z-index: 4;
+}
+
+/* ========================================
+   CENTER COLUMN: Content
+   ======================================== */
+
+.center-column {
+  flex: 1;
+  padding: 0 10px;
+  position: relative;
+  z-index: 10;
+}
+
+/* Header: Logo + Tagline - HORIZONTAL ROW */
+.header-area {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 12px;
+}
+
+.main-logo {
+  width: clamp(150px, 15vw, 240px);
+  flex-shrink: 0;
+}
+
+/* Text Tagline - Inline with Logo */
+.tagline-container {
+  flex: 1;
+  padding-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(4px, 0.5vw, 8px);
+  flex-wrap: wrap;
+}
+
+.tagline-item {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+}
+
+.tag-word {
+  font-size: clamp(20px, 2.5vw, 38px);
+  font-weight: 800;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: -0.2px;
+  display: block;
+  margin-bottom: -7px;
+}
+
+.tag-plus {
+  font-size: clamp(18px, 2vw, 32px);
+  font-weight: 800;
+  color: #f47a30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 50%;
+  width: clamp(20px, 2vw, 30px);
+  height: clamp(20px, 2vw, 30px);
+  flex-shrink: 0;
+}
+
+.tag-sub {
+  font-size: clamp(11px, 1.2vw, 19px);
+  font-weight: 700;
+  color: #5a266e;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  display: block;
+  text-align: center;
+}
+
+/* Headings */
+.medical-heading {
+  font-size: clamp(20px, 2vw, 32px);
+  color: #2c529d;
+  font-weight: 400;
+  margin-bottom: 2px;
+  letter-spacing: -0.5px;
+}
+
+.maximum-virility-container {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.maximum-heading {
+  font-size: clamp(32px, 4vw, 64px);
+  font-weight: 800;
+  color: #f47a30;
+  text-transform: uppercase;
+  line-height: 0.9;
+  margin-top: 0;
+  margin-bottom: 10px;
+  letter-spacing: -2px;
+}
+
+.sexual-text {
+  color: #5a266e;
+}
+
+.virility-text {
+  width: 70%;
+  font-size: clamp(16px, 1.8vw, 28px);
+  font-weight: 300;
+  color: #fff;
+  background: linear-gradient(90deg, #f47a30 0%, #ff8c42 100%);
+  letter-spacing: 2.5px;
+  margin: 0;
+  padding: 00px 14px;
+  display: inline-block;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Benefits List */
+.benefits-list {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.benefits-list li {
+  background: url(../images/index-page/bulletpoint.png) left 4px no-repeat;
+  background-size: 30px 30px;
+  padding-left: 42px;
+  margin-bottom: 8px;
+  min-height: 38px;
+}
+
+.prescription-item {
+  background: none !important;
+  padding-left: 0 !important;
+  margin-bottom: 12px;
+}
+
+.prescription-img {
+  width: 552px;
+  margin-left: -20px;
+}
+
+.benefit-title {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  color: #482556;
+  margin-bottom: 1px;
+}
+
+.benefit-desc {
+  display: block;
+  font-size: 16px;
+  color: #2e4555;
+}
+
+/* Yellow CTA Button - Arrow Shaped */
+.cta-yellow {
+  background: linear-gradient(180deg, #ffd700 0%, #f4c430 50%, #daa520 100%);
+  border: none;
+  padding: 20px 55px 20px 45px;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  margin-bottom: 18px;
+  display: inline-block;
+  position: relative;
+  clip-path: polygon(0 0, 95% 0, 100% 50%, 95% 100%, 0 100%);
+  border-radius: 8px 0 0 8px;
+}
+
+.cta-yellow:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.cta-yellow:active {
+  transform: translateY(0);
+}
+
+.cta-big {
+  display: block;
+  font-size: 34px;
+  font-weight: 800;
+  font-style: italic;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.cta-small {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-top: 6px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* As Seen On */
+.as-seen-text {
+  font-size: 14px;
+  font-weight: 700;
+  color: #000;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+}
+
+.as-seen-logos {
+  width: 380px;
+}
+
+/* ========================================
+   RIGHT COLUMN: Form
+   ======================================== */
+
+.right-column {
+  flex: 0 0 320px;
+  position: relative;
+  z-index: 10;
+}
+
+.form-wrapper {
+  background: #f7f7f1;
+  border: 3px solid #6a2e84;
+  border-bottom: 7px solid #6a2e84;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.form-header img {
+  width: 100%;
+  display: block;
+}
+
+.form-fields {
+  padding: 15px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #6a2e84;
+}
+
+.secure-text {
+  text-align: center;
+  font-size: 11px;
+  color: #666;
+  margin: 15px 0 10px;
+}
+
+.submit-btn {
+  width: 100%;
+  background: linear-gradient(180deg, #7bc63f 0%, #5fa32d 100%);
+  color: #fff;
+  font-size: 24px;
+  font-weight: 800;
+  padding: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+.form-footer {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.security-badges {
+  width: 150px;
+  margin: 0 auto;
+}
+
+/* Pulse Animation */
+.pulse {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.02);
+    opacity: 0.95;
+  }
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+footer {
+  background: #fff;
+  padding: 40px 20px;
+  text-align: center;
+  border-top: 1px solid #e0e0e0;
+}
+
+#footer_trial_disclaimer {
+  max-width: 900px;
+  margin: 0 auto 25px;
+  font-size: 13px;
+  line-height: 1.8;
+  color: #666;
+}
+
+#footer_trial_disclaimer div {
+  margin-bottom: 12px;
+}
+
+.footer {
+  border-top: 1px solid #e7e7ce;
+  padding-top: 20px;
+}
+
+.copyright,
+.customerservice,
+.footerlinks {
+  font-size: 14px;
+  color: #887070;
+  margin: 5px 0;
+}
+
+.footerlinks a {
+  color: #887070;
+  text-decoration: none;
+}
+
+.footerlinks a:hover {
+  text-decoration: underline;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 1200px) {
+  #section1 {
+    min-height: auto;
+  }
+
+  .contentWrap {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-column {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .center-column,
+  .right-column {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .couple-container {
+    position: relative;
+    left: 0;
+    width: 100%;
+  }
+
+  .couple-image {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+    -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  }
+
+  .bottles-container {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    bottom: 5%;
+    transform: translateX(-50%);
+    width: 75%;
+    max-width: 300px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    overflow: hidden;
+    z-index: 2;
+  }
+
+  .bottle {
+    position: relative;
+    width: 42%;
+    height: auto;
+  }
+
+  .bottle-1 {
+    left: 20%;
+    top: 0%;
+    z-index: 2;
+    margin-bottom: 0;
+  }
+
+  .bottle-2 {
+    left: -0%;
+    top: 40px;
+    z-index: 3;
+    margin-bottom: 15px;
+  }
+
+  .usa-seal {
+    left: 5%;
+    bottom: 20px;
+    width: 30%;
+    bottom:20%;
+  }
+
+  .main-logo,
+  .tagline-container,
+  .medical-heading,
+  .maximum-heading,
+  .prescription-container,
+  .virility-text,
+  .benefits-list,
+  .cta-yellow,
+  .as-seen-text,
+  .as-seen-logos {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .tagline-main,
+  .tagline-subs {
+    justify-content: center;
+  }
+
+  .benefits-list li {
+    text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .maximum-heading {
+    font-size: 40px;
+  }
+
+  .cta-big {
+    font-size: 28px;
+  }
+
+  .form-wrapper {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  .contentWrap {
+    padding: 0 5px;
+  }
+
+  .header-area {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .main-logo {
+    width: clamp(280px, 25vw, 350px);
+  }
+
+  .tagline-container {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .tag-word {
+    font-size: clamp(32px, 3vw, 42px);
+  }
+
+  .tag-sub {
+    font-size: clamp(16px, 1.5vw, 22px);
+  }
+
+  .maximum-heading {
+    font-size: clamp(56px, 5.5vw, 72px);
+  }
+
+  .virility-text {
+    margin: 0 auto;
+    display: block;
+  }
+
+  .prescription-img {
+    width: 400px;
+    max-width: 100%;
+  }
+
+  .benefits-list {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .benefits-list li {
+    font-size: 18px;
+  }
+
+  .benefit-title {
+    font-size: 20px;
+  }
+
+  .cta-yellow {
+    display: block;
+    margin: 0 auto 18px;
+  }
+
+  .cta-big {
+    font-weight: 900;
+  }
+}
+
+@media (max-width: 480px) {
+  #section1 {
+    min-height: auto;
+  }
+
+  .sec1inner {
+    padding: 20px 0;
+  }
+
+  .couple-container {
+    max-height: 500px;
+    overflow: hidden;
+  }
+
+  .couple-image {
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+  }
+
+  .left-column {
+    margin-bottom: 15px;
+    min-height: 500px;
+  }
+
+  .contentWrap {
+    padding: 0 10px;
+    gap: 10px;
+  }
+
+  .center-column {
+    padding-top: 0;
+  }
+
+  .header-area {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 20px;
+  }
+
+  .main-logo {
+    width: clamp(180px, 50vw, 240px);
+    margin-bottom: 0;
+  }
+
+  .tagline-container {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 4px;
+  }
+
+  .tag-word {
+    font-size: 18px;
+  }
+
+  .tag-sub {
+    font-size: 10px;
+  }
+
+  .tag-plus {
+    font-size: 16px;
+    width: 18px;
+    height: 18px;
+  }
+
+  .medical-heading {
+    font-size: 18px;
+    white-space: nowrap;
+  }
+
+  .maximum-heading {
+    font-size: 28px;
+  }
+
+  .virility-text {
+    width: 100%;
+  }
+
+  .cta-yellow {
+    width: 95%;
+    padding: 18px 25px 18px 15px;
+    text-align: center;
+    clip-path: polygon(0 0, 95% 0, 100% 50%, 95% 100%, 0 100%);
+    border-radius: 8px 0 0 8px;
+  }
+
+  .cta-big {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+
+  .benefits-list {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .benefits-list li {
+    padding-left: 35px;
+  }
+}
