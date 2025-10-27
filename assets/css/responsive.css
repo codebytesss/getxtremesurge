@@ -6,7 +6,7 @@
    TABLET STYLES (768px - 1024px)
    ======================================== */
 @media screen and (max-width: 1024px) {
-    /* Overall page styling */
+    
     body {
         background: linear-gradient(to bottom, #f5f7fa 0%, #ffffff 100%);
     }
