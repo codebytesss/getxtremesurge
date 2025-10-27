@@ -457,11 +457,13 @@ img {
 }
 
 @keyframes pulse {
+
   0%,
   100% {
     transform: scale(1);
     opacity: 1;
   }
+
   50% {
     transform: scale(1.02);
     opacity: 0.95;
@@ -596,7 +598,7 @@ footer {
     left: 5%;
     bottom: 20px;
     width: 30%;
-    bottom:20%;
+    bottom: 20%;
   }
 
   .main-logo,
@@ -622,6 +624,95 @@ footer {
   .benefits-list li {
     text-align: left;
   }
+
+}
+
+@media (max-width: 1024px) {
+  .sec3inner {
+    background: transparent !important;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .box2-positioning {
+    align-items: center !important;
+  }
+
+  .s3hding {
+    font-size: 24px !important;
+    text-align: center !important;
+  }
+
+  .s3hding span {
+    font-size: 40px !important;
+  }
+
+  .midImageContainer {
+    display: flex;
+    position: relative !important;
+    right: 0 !important;
+    top: -50px !important;
+    left: -30% !important;
+    transform: translateX(-50%);
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .sec3txt {
+    max-width: 400px;
+    text-align: center !important;
+    padding: 0 !important;
+  }
+
+  .s3hding {
+    padding: 0 !important;
+  }
+
+  .sec3txt-wrap2 {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    text-align: end;
+    justify-content: center;
+    height: 380px;
+    width: 80%;
+  }
+
+  .sec3txt-wrap2 .sec3txt2 {
+    color: #5a266e !important;
+  }
+
+  .sec3txt2 {
+    text-align: end !important;
+  }
+
+  .satisfaction-seal {
+    display: none;
+  }
+
+  .satisfaction-seal2 {
+    display: block !important;
+  }
+
+  .sec3txt-wrap3 {
+    display: flex;
+    justify-content: center;
+  }
+
+  .sec3txt-wrap3 .sec3txt4 {
+    margin: 0 auto !important;
+    padding: 10px 0 0px 20px !important;
+  }
+}
+
+@media (max-width: 850px) {
+  .sec3txt-wrap2 .sec3txt2 {
+    max-width: 300px !important;
+  }
+
+  .sec3txt-wrap2 .sec3txt3 {
+    max-width: 300px !important
+  }
 }
 
 @media (max-width: 768px) {
@@ -635,6 +726,68 @@ footer {
 
   .form-wrapper {
     max-width: 100%;
+  }
+
+  .box-area {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .s2box1,
+  .s2box2,
+  .s2box3,
+  .s2box4 {
+    width: 100% !important;
+    margin-bottom: 20px !important;
+  }
+
+  .midImageContainer {
+    top: -20px !important;
+    left: -15% !important;
+  }
+
+  .sec3txt-wrap2 {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    text-align: center;
+    justify-content: center;
+    height: 260px;
+    width: 80%;
+    margin: 300px 0 50px 0 !important;
+  }
+
+  .sec3txt2 {
+    text-align: end !important;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .sec3txt-wrap2 {
+    flex-direction: column;
+    height: auto;
+    margin-top: 400px !important;
+  }
+
+  .sec3txt-wrap2 .sec3txt2,
+  .sec3txt-wrap2 .sec3txt3 {
+    text-align: center !important;
+    margin: 0 auto !important;
+    max-width: 100% !important;
+  }
+
+  .sec3txt-wrap3 {
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 20px 0 !important;
+  }
+
+  .sec3txt-wrap3 .sec3txt4 {
+    margin: 0 auto !important;
+    padding: 30px 0 0px 0px !important;
+    max-width: 400px !important;
+    text-align: center !important;
   }
 }
 
@@ -805,4 +958,336 @@ footer {
   .benefits-list li {
     padding-left: 35px;
   }
+
+  .sec3txt {
+    max-width: 400px !important;
+  }
+
+  .midImageContainer {
+    top: 88px !important;
+    left: -30% !important;
+  }
+
+  .sec3txt-wrap2 {
+    margin-top: 430px;
+  }
+
+  .sec3txt-wrap3 .sec3txt4 {
+    max-width: 340px !important;
+  }
+}
+
+/* ========================================
+   SECTION 2: Sexual Health Divide
+   ======================================== */
+
+div#section2 {
+  background: #fff;
+}
+
+.box2-positioning {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 1004px;
+}
+
+.sec2inner {
+  background: url(../images/section2.jpg) center top no-repeat;
+}
+
+.sec2hding {
+  font-family: 'Open Sans';
+  font-size: 35px;
+  line-height: 41px;
+  color: #050404;
+  text-align: center;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 49px 0 0 0;
+  font-weight: 800;
+}
+
+.sec2hding span {
+  color: red;
+  font-size: 48px;
+  line-height: 33px;
+}
+
+.s2txt {
+  font-size: 20px;
+  line-height: 22px;
+  text-align: center;
+  color: #282828;
+  margin: 0;
+  padding: 0;
+}
+
+.box-area {
+  width: 92%;
+  margin: 24px auto 50px auto;
+  padding: 0;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+
+}
+
+.s2box1,
+.s2box2,
+.s2box3,
+.s2box4 {
+  width: 25%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.s2box-txt {
+  font-size: 20px;
+  line-height: 22px;
+  color: #282828;
+  text-align: center;
+  letter-spacing: -0.5px;
+  font-weight: 700;
+  padding: 10px 0 0 0;
+  margin: 0;
+}
+
+/* ========================================
+   SECTION 3: Male Enhancement System
+   ======================================== */
+
+div#section3 {
+  background: #fafdfd;
+}
+
+.sec3inner {
+  background: url(../../new_assets/images/section3.jpg) center center no-repeat;
+  margin: 0 auto;
+  position: relative;
+}
+
+
+div.bottle {
+  background-image: url(../brand/product.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 300px;
+  height: 340px;
+  position: absolute;
+}
+
+
+div.bottle_lp_bot_2,
+div.bottle_lp_bot_3,
+div.bottle_lp_bot_1 {
+  background-image: url(../brand/product.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+  margin: 0;
+  width: 220px;
+  height: 220px;
+  padding: 0;
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: inline-block;
+}
+
+div.bottle_lp_bot_2 {
+  float: left;
+  margin-right: -100%;
+}
+
+div.bottle_lp_bot_3 {
+  margin-left: -100%;
+  float: right;
+}
+
+div.bottle_lp_bot_1 {
+  width: 45%;
+  z-index: 2;
+  margin: -20px auto 0;
+  width: 280px;
+  height: 280px;
+}
+
+div#bottle_lp_bot_2,
+div#bottle_lp_bot_3,
+div#bottle_lp_bot_1 {
+  background-image: url(brand/logo-2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+  margin: 0;
+  width: 220px;
+  height: 220px;
+  padding: 0;
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: inline-block;
+}
+
+/* 
+v2-step-1-img-3 {
+  top: 425px;
+  left: -100px; */
+
+.midImageContainer {
+  position: absolute;
+  right: 194px;
+  top: 62px;
+}
+
+.device-desktop-page-index-flow-me-v2-step-1-img-3,
+.device-desktop-page-index-flow-me-v2-step-1-img-4 {
+  background-image: url(../../new_assets/images/bottle.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 167px;
+  height: 346px;
+  position: absolute;
+}
+
+.device-desktop-page-index-flow-me-v2-step-1-img-3 {
+  top: 425px;
+  left: -100px;
+}
+
+.device-desktop-page-index-flow-me-v2-step-1-img-4 {
+  top: 460px;
+  left: 0px;
+}
+
+.satisfaction-seal {
+  position: absolute;
+  top: 690px;
+  left: 19px;
+}
+
+.s3hding {
+  font-family: 'Open Sans';
+  font-size: 35px;
+  line-height: 41px;
+  color: #5a266e;
+  text-align: left;
+  padding: 60px 0 0 0;
+  margin-left: -0.5px;
+  letter-spacing: -1.2px;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.s3hding span {
+  color: #f47a30;
+  font-size: 60px;
+  line-height: 33px;
+}
+
+.sec3txt {
+  font-size: 16px;
+  line-height: 24px;
+  max-width: 626px;
+  margin: 0;
+  letter-spacing: -0.5px;
+  padding: 0 !important;
+}
+
+.sec3txt span {
+  color: #f47a30;
+}
+
+.sec3txt2 {
+  font-size: 24px;
+  line-height: 27px;
+  color: #fff;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  margin: 0;
+  padding: 20px 0 0 20px !important;
+}
+
+.sec3txt2 span {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.sec3txt3 {
+  font-size: 17px !important;
+  line-height: 20px;
+  text-transform: none;
+  width: 382px;
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: -0.4px;
+  padding: 6px 0 0 20px;
+  margin: 0 !important;
+}
+
+.sec3txt4 {
+  font-size: 18px;
+  color: #232323;
+  width: 516px;
+  line-height: 24px;
+  letter-spacing: -0.5px;
+  padding: 10px 0 0 156px;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.btn-strip {
+  background: url(../../new_assets/images/btn-strip.png) center top no-repeat;
+  height: 123px;
+  width: 100%;
+  position: relative;
+  margin: 32px auto 0 auto;
+}
+
+.btn-txt {
+  font-size: 23px;
+  line-height: 33px;
+  color: #262626;
+  text-align: left;
+  font-weight: 700;
+  letter-spacing: -0.6px;
+  margin: 0;
+  padding: 31px 0 0 20px;
+}
+
+.btn-txt span {
+  font-size: 37px;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+}
+
+.sec3btn {
+  position: absolute;
+  top: 27px;
+  right: 27px;
+}
+
+.toTop {
+  cursor: pointer;
+}
+
+.satisfaction-seal2 {
+  display: none;
 }

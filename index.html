@@ -84,7 +84,8 @@
                             <div class="fields">
                                 <div class="field-first_name frm-element input left">
                                     <label>First Name: </label>
-                                    <input class="form-control" placeholder="First Name" type="text" name="fields_fname" required="">
+                                    <input class="form-control" placeholder="First Name" type="text" name="fields_fname"
+                                        required="">
                                     <div class="spacer clear"></div>
                                 </div>
                                 <div class="field-last_name frm-element input left">
@@ -95,37 +96,30 @@
                                 </div>
                                 <div class="field-zip frm-element input left">
                                     <label>Zip: </label>
-                                    <input type="tel" pattern="^[0-9]{5}" name="fields_zip"
-                                        placeholder="Zip / Postal" required=""
-                                        class="form-control  "
-                                       >
+                                    <input type="tel" pattern="^[0-9]{5}" name="fields_zip" placeholder="Zip / Postal"
+                                        required="" class="form-control  ">
                                     <div class="spacer clear"></div>
                                 </div>
                                 <div class="field-address frm-element input left">
                                     <label>Address: </label>
                                     <input type="text"
                                         pattern="^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[ ])([a-zA-Z0-9\/\-\. ]+)$"
-                                        name="fields_address1" placeholder="Address" required=""
-                                        class="form-control  "
-                                       
-                                       >
+                                        name="fields_address1" placeholder="Address" required="" class="form-control  ">
                                     <div class="spacer clear"></div>
                                 </div>
 
                                 <div class="field-city frm-element input left">
                                     <label>City: </label>
 
-                                    <input type="text" pattern="^[a-zA-Z. ]{3,}$" name="fields_city"
-                                        placeholder="City" required="" class="form-control  "
-                                       >
+                                    <input type="text" pattern="^[a-zA-Z. ]{3,}$" name="fields_city" placeholder="City"
+                                        required="" class="form-control  ">
                                     <div class="spacer clear"></div>
                                 </div>
                                 <div class="field-state frm-element input left">
                                     <label>State: </label>
 
-                                    <select name="fields_state" required="" class="form-control   "
-                                        id="shipState" data-default=""
-                                       >
+                                    <select name="fields_state" required="" class="form-control   " id="shipState"
+                                        data-default="">
                                         <option>Select a State</option>
                                         <option value="AL">Alabama</option>
                                         <option value="AK">Alaska</option>
@@ -184,17 +178,15 @@
                                 <div class="field-phone frm-element input left">
                                     <label>Phone: </label>
 
-                                    <input type="tel" name="fields_phone" placeholder="Phone Number"
-                                        required="" class="form-control  "
-                                       >
+                                    <input type="tel" name="fields_phone" placeholder="Phone Number" required=""
+                                        class="form-control  ">
                                     <div class="spacer clear"></div>
                                 </div>
                                 <div class="field-email frm-element input left">
                                     <label>Email: </label>
 
-                                    <input type="email" name="fields_email" placeholder="Email Address"
-                                        required="" class="form-control  "
-                                       >
+                                    <input type="email" name="fields_email" placeholder="Email Address" required=""
+                                        class="form-control  ">
                                     <div class="spacer clear"></div>
                                 </div>
 
@@ -693,7 +685,7 @@
 
     <script>
         // Update date dynamically
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const dateElement = document.querySelector('.date-container');
             const now = new Date();
             const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -701,8 +693,8 @@
 
             // Scroll to top functionality
             const scrollButtons = document.querySelectorAll('.toTop');
-            scrollButtons.forEach(function(button) {
-                button.addEventListener('click', function(e) {
+            scrollButtons.forEach(function (button) {
+                button.addEventListener('click', function (e) {
                     e.preventDefault();
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                 });
