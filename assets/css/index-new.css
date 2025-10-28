@@ -378,6 +378,26 @@ img {
   z-index: 10;
 }
 
+@media (min-width: 1025px) {
+  .tagline-container {
+    flex-wrap: nowrap;
+    max-width: 500px;
+  }
+
+  .tag-word {
+    white-space: nowrap;
+  }
+
+  .tag-sub {
+    white-space: nowrap;
+  }
+
+  .right-column {
+    margin-top: 122px;
+    margin-left: -122px;
+  }
+}
+
 .form-wrapper {
   background: #f7f7f1;
   border: 3px solid #6a2e84;
