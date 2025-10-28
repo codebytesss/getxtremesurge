@@ -817,6 +817,10 @@ footer {
     padding: 30px 20px 0 20px !important;
   }
 
+  .s6hding span {
+    font-size: 40px !important;
+  }
+
   .s5hding span {
     font-size: 40px !important;
   }
@@ -964,6 +968,189 @@ footer {
 
   .s5lft-txt {
     display: none !important;
+  }
+
+  /* Section 6 responsive */
+  div#section6 {
+    background: transparent !important;
+    height: auto !important;
+  }
+
+  .sec6inner {
+    background: transparent !important;
+  }
+
+  .s6hding {
+    font-size: 24px !important;
+    line-height: 28px !important;
+    text-align: center !important;
+    padding: 30px 20px 0 20px !important;
+  }
+
+  .natural-seal {
+    display: none !important;
+  }
+
+  .sec6lft,
+  .sec6rgt {
+    width: 100% !important;
+    float: none !important;
+    margin: 20px 0 !important;
+    padding: 0 !important;
+    position: static !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    height: auto !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 10px !important;
+  }
+
+  .sec6lft>p {
+    width: 40% !important;
+    margin: 10px 1% !important;
+    padding: 15px !important;
+    box-sizing: border-box !important;
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 8px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    background: #fff !important;
+  }
+
+  .sec6lft>div {
+    width: 40% !important;
+    margin: 10px 1% !important;
+    padding: 15px !important;
+    box-sizing: border-box !important;
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 8px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    background: #fff !important;
+  }
+
+  .sec6rgt>p {
+    width: 40% !important;
+    margin: 10px 1% !important;
+    padding: 15px !important;
+    box-sizing: border-box !important;
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 8px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    background: #fff !important;
+  }
+
+  .sec6rgt>div {
+    width: 40% !important;
+    margin: 10px 1% !important;
+    padding: 15px !important;
+    box-sizing: border-box !important;
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 8px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    background: #fff !important;
+  }
+
+  .lftingrnts,
+  .rgtingrnts,
+  .s6bttm-ingrnts {
+    width: 40% !important;
+    margin: 10px 1% !important;
+    padding: 15px !important;
+    box-sizing: border-box !important;
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 8px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    background: #fff !important;
+  }
+
+  .s6ingrnts1,
+  .s6ingrnts2,
+  .s6ingrnts3,
+  .s6ingrnts4,
+  .s6ingrnts5,
+  .s6ingrnts6 {
+    text-align: center !important;
+    padding: 0 0 0px 0 !important;
+    font-size: 20px !important;
+    position: static !important;
+    left: 0 !important;
+  }
+
+  .s6txt,
+  .s6txt2,
+  .s6txt3 {
+    text-align: center !important;
+    padding: 10px 5px !important;
+    width: 100% !important;
+    font-size: 15px !important;
+  }
+
+  .s6btm-txt,
+  .s6box7 {
+    width: 84% !important;
+    padding: 20px 15px !important;
+    text-align: center !important;
+    position: static !important;
+    top: 0 !important;
+    margin: 10px 0 !important;
+    box-sizing: border-box !important;
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 8px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    background: #fff !important;
+  }
+
+  .s6btm-txt span,
+  .s6ingrnts7 {
+    font-size: 24px !important;
+    color: #5a266e !important;
+    font-weight: 700 !important;
+    display: block !important;
+    padding-bottom: 0px !important;
+  }
+
+  .s6btn-strip {
+    background: transparent !important;
+    margin: 30px auto 0 auto !important;
+  }
+
+  .s6btn-strip .btn-txt {
+    text-align: center !important;
+  }
+
+  .s6btn-strip .sec3btn {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin-top: 15px;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .s6btn-strip .btn-txt {
+    padding-top: 10px !important;
+  }
+
+  .clearall {
+    display: none !important;
+    height: 0 !important;
+  }
+
+  .s6ingrnts1,
+  .s6ingrnts2 {
+    color: #000 !important;
+  }
+
+  .s6box1,
+  .s6box2,
+  .s6box3,
+  .s6box4,
+  .s6box5,
+  .s6box6,
+  .s6box7 {
+    width: 32% !important;
   }
 }
 
@@ -1263,6 +1450,18 @@ footer {
     left: -350px !important;
     top: -42px !important;
   }
+
+  /* Section 6 - single column */
+  .sec6lft>p,
+  .sec6lft>div,
+  .sec6rgt>p,
+  .sec6rgt>div,
+  .lftingrnts,
+  .rgtingrnts,
+  .s6bttm-ingrnts {
+    width: 85% !important;
+    margin: 10px auto !important;
+  }
 }
 
 /* ========================================
@@ -1315,7 +1514,7 @@ div#section2 {
 
 .box-area {
   width: 92%;
-  margin: 24px auto 50px auto;
+  margin: 24px auto 0px auto;
   padding: 0;
   position: relative;
   box-sizing: border-box;
@@ -1919,4 +2118,173 @@ div#section5 {
 
 .midImageContainer2 {
   display: none;
+}
+
+/* ========================================
+   SECTION 6: Powerful Ingredients
+   ======================================== */
+
+div#section6 {
+  background: #fff;
+}
+
+.sec6inner {
+  background: url(../../new_assets/images/section6.jpg) center top no-repeat;
+  margin: 0 auto;
+}
+
+.s6hding {
+  font-family: 'Open Sans';
+  font-size: 35px;
+  line-height: 32px;
+  color: #5a266e;
+  text-align: left;
+  padding: 26px 0 0 0;
+  margin: 0;
+  letter-spacing: -1.2px;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.s6hding span {
+  color: #f47a30;
+  font-size: 40px;
+  line-height: 33px;
+}
+
+.natural-seal {
+  position: absolute;
+  top: 16px;
+  right: 12px;
+}
+
+.sec6lft,
+.sec6rgt {
+  float: left;
+  display: inline-block;
+  width: 26%;
+  padding: 0;
+  margin: 80px 0 0 0;
+}
+
+.sec6rgt {
+  width: 73%;
+  padding: 0 0 0 3px;
+  position: relative;
+  left: 246px !important;
+  bottom: 603px;
+  height: 0px;
+}
+
+.s6ingrnts1,
+.s6ingrnts2,
+.s6ingrnts3,
+.s6ingrnts4,
+.s6ingrnts5,
+.s6ingrnts6 {
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 22px;
+  line-height: 24px;
+  letter-spacing: -0.5px;
+  margin: 0;
+  padding: 0;
+}
+
+.s6ingrnts2 {
+  padding: 56px 0 0 0;
+}
+
+.s6ingrnts3 {
+  color: #f47a30;
+  text-align: left;
+  padding: 0 0 0 164px;
+}
+
+.lftingrnts,
+.rgtingrnts {
+  float: left;
+  display: inline-block;
+  width: 49%;
+  margin: 0;
+  padding: 0;
+}
+
+.s6ingrnts4,
+.s6ingrnts5 {
+  color: #d50023;
+  text-align: left;
+  padding: 16px 0 0 21px;
+}
+
+.rgtingrnts {
+  padding: 0px 0 0 20px;
+}
+
+.s6ingrnts5 {
+  padding: 27px 0 0 24px;
+  color: #083c90;
+}
+
+.s6txt,
+.s6txt2,
+.s6txt3 {
+  color: #353535;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: -0.4px;
+  margin: 0;
+  padding: 120px 0 0 0;
+}
+
+.s6txt2 {
+  text-align: left;
+  padding: 3px 34px 0 165px;
+}
+
+.s6txt3 {
+  text-align: left;
+  width: 200px;
+  padding: 6px 10px 0 23px;
+}
+
+.s6ingrnts6 {
+  color: #703135;
+  text-align: left;
+  padding: 250px 0 3px 343px;
+  position: relative;
+  left: -180px;
+}
+
+.s6btm-txt {
+  font-size: 18px;
+  line-height: 24px;
+  color: #353535;
+  text-align: left;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  width: 700px;
+  margin: 0;
+  padding: 0px 0 0 5px;
+  position: relative;
+  top: -80px;
+}
+
+.s6btm-txt span {
+  font-size: 30px;
+  line-height: 34px;
+  font-weight: 700;
+  color: #f47a30;
+  text-transform: uppercase;
+}
+
+.s6btn-strip {
+  background: url(../../new_assets/images/btn-strip.png) center top no-repeat;
+  height: 123px;
+  width: 100%;
+  position: relative;
+  margin: -108px auto 0 auto;
 }
