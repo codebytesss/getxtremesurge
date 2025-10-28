@@ -703,6 +703,99 @@ footer {
     margin: 0 auto !important;
     padding: 10px 0 0px 20px !important;
   }
+
+  .btn-strip,
+  div#section4 .s4btn-strip {
+    background: transparent !important;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  div#section4 .s4img {
+    position: relative;
+    /* left: 674px; */
+    bottom: 170px;
+  }
+
+  .btn-txt {
+    font-size: 16px !important;
+    text-align: center !important;
+  }
+
+  .btn-txt span {
+    font-size: 24px !important;
+    text-align: center !important;
+  }
+
+  .btn-strip .sec3btn,
+  .s4btn-strip .sec3btn {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin-top: 15px;
+  }
+
+  .s4btn-strip {
+    width: auto !important;
+  }
+
+  .mob-padding {
+    padding-bottom: 80px !important;
+  }
+
+  div#section4 {
+    background: transparent !important;
+  }
+
+  .s4txt-wrap-lower-section {
+    display: none !important;
+  }
+
+  div#section4,
+  .box2-positioning {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 30px !important;
+    width: 100% !important;
+    padding-top: 30px !important;
+  }
+
+  div#section4 .s4hding,
+  div#section4 .s4txt,
+  div#section4 .s4txt2,
+  div#section4 .s4txt3 {
+    text-align: center !important;
+    padding: 0 20px !important;
+    width: auto !important;
+    max-width: 90% !important;
+    margin: 0 auto !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  div#section4 .s4txt2 {
+    height: 0 !important;
+  }
+
+  div#section4 .s4seal {
+    display: none !important;
+  }
+
+  div#section4 .s4img {
+    position: relative;
+    left: 0px !important;
+    bottom: 0px !important;
+    width: 450px !important;
+    height: auto !important;
+  }
+
+  div#section4 {
+    height: auto !important;
+  }
 }
 
 @media (max-width: 850px) {
@@ -1290,4 +1383,155 @@ v2-step-1-img-3 {
 
 .satisfaction-seal2 {
   display: none;
+}
+
+/* ========================================
+   SECTION 4: The Science Behind
+   ======================================== */
+
+div#section4 {
+  background: url(../../new_assets/images/section4.jpg) center top no-repeat;
+  height: 922px;
+  max-width: 1004px;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+#section4 .box2-positioning {
+  align-items: start;
+}
+
+
+div#section4 .s4hding {
+  font-family: 'Open Sans';
+  font-size: 35px;
+  line-height: 45px;
+  color: #5a266e;
+  text-align: left;
+  padding: 40px 0 0 137px;
+  margin: 0;
+  letter-spacing: -1.2px;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+div#section4 .s4hding span {
+  color: #f47a30;
+  line-height: 33px;
+}
+
+div#section4 .s4seal {
+  position: absolute;
+  top: 66px;
+  right: 35px;
+}
+
+div#section4 .s4txt {
+  font-size: 16px;
+  line-height: 24px;
+  text-align: left;
+  color: #404040;
+  letter-spacing: -0.5px;
+  margin: 0;
+  padding: 21px 0 0 204px;
+}
+
+div#section4 .s4txt span {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #000;
+}
+
+div#section4 .s4txt b {
+  color: #e66120;
+}
+
+div#section4 .s4txt2 {
+  color: #fff;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: left;
+  font-weight: 600;
+  padding: 6px 0 0 129px;
+  width: 680px;
+  letter-spacing: -0.5px;
+  margin: 0;
+}
+
+div#section4 .s4txt3 {
+  font-size: 15px;
+  line-height: 20px;
+  text-align: left;
+  color: #404040;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  padding: 21px 0 0 127px;
+  width: 714px;
+  margin: 0;
+}
+
+div#section4 .s4txt3 span {
+  color: #e66120;
+}
+
+div#section4 .s4txt4 {
+  font-size: 24px;
+  line-height: 30px;
+  color: #e66120;
+  text-align: left;
+  font-style: italic;
+  letter-spacing: -0.6px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 26px 0 0 182px;
+}
+
+div#section4 .s4txt5 {
+  font-size: 24px;
+  line-height: 30px;
+  color: #e66120;
+  text-align: left;
+  font-style: italic;
+  letter-spacing: normal;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 11px 0 0 182px;
+}
+
+div#section4 .s4txt6 {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 700;
+  color: #303030;
+  letter-spacing: -0.4px;
+  padding: 31px 0 0 9px;
+}
+
+div#section4 .s4txt6 span {
+  color: #e66120;
+}
+
+div#section4 .s4img {
+  position: relative;
+  left: 674px;
+  bottom: 120px;
+}
+
+div#section4 .s4btn-strip {
+  background: url(../../new_assets/images/btn-strip.png) center top no-repeat;
+  height: 123px;
+  width: 984px;
+  position: relative;
+  margin: 30px auto 80px auto;
+}
+
+.s4txt-wrap-lower-section {
+  position: relative;
+  top: -388px;
+  left: -9px;
 }
