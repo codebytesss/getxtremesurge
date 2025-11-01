@@ -42,8 +42,11 @@ img {
 
 .hdrtxt {
   color: #fff;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
 .hdrtxt span {
@@ -369,6 +372,20 @@ img {
 }
 
 /* ========================================
+   RIGHT CONTENT WRAPPER
+   ======================================== */
+
+.right-content-wrapper {
+  flex: 1;
+  position: relative;
+  z-index: 10;
+}
+
+.content-and-form-wrapper {
+  display: block;
+}
+
+/* ========================================
    RIGHT COLUMN: Form
    ======================================== */
 
@@ -517,6 +534,136 @@ footer {
    RESPONSIVE DESIGN
    ======================================== */
 
+@media (min-width: 1025px) {
+  .tagline-container {
+    flex-wrap: nowrap;
+    max-width: 500px;
+  }
+
+  .tag-word {
+    white-space: nowrap;
+  }
+
+  .tag-sub {
+    white-space: nowrap;
+  }
+
+  .left-column {
+    flex: 0 0 400px;
+  }
+
+  /* Add padding to sec1inner */
+  .sec1inner {
+    padding-top: 0;
+    padding-bottom: 40px;
+  }
+
+  /* Position bottles on the right side of left column - horizontal row */
+  .left-column .bottles-container {
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .left-column .bottle {
+    position: relative;
+    width: 160px;
+    height: auto;
+    left: 0;
+    top: 0;
+  }
+
+  .left-column .bottle-1 {
+    margin: 0;
+    order: 2;
+    z-index: 1;
+  }
+
+  .left-column .bottle-2 {
+    margin: 0;
+    margin-left: -60px;
+    order: 3;
+    z-index: 2;
+  }
+
+  .left-column .usa-seal {
+    position: relative;
+    width: 100px;
+    left: 0;
+    bottom: 0;
+    order: 1;
+    z-index: 0;
+  }
+
+  /* New wrapper for header + content + form */
+  .right-content-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Header area spans full width */
+  .header-area {
+    width: 100%;
+  }
+
+  /* Container for content and form side by side */
+  .content-and-form-wrapper {
+    display: flex;
+    gap: 0;
+    align-items: flex-start;
+  }
+
+  .center-column {
+    flex: 0 0 440px;
+    width: 440px;
+  }
+
+  .right-column {
+    flex: 0 0 280px;
+    width: 280px;
+  }
+
+  /* Adjust center column content to fit 440px width */
+  .center-column .prescription-img {
+    width: 100%;
+    max-width: 440px;
+    margin-left: 0;
+  }
+
+  .center-column .virility-text {
+    width: 80%;
+    font-size: clamp(14px, 1.6vw, 20px);
+  }
+
+  .center-column .as-seen-logos {
+    width: 100%;
+    max-width: 380px;
+  }
+
+  .center-column .cta-yellow {
+    padding: 18px 45px 18px 35px;
+  }
+
+  .center-column .cta-big {
+    font-size: 28px;
+  }
+
+  .center-column .benefit-title {
+    font-size: 18px;
+  }
+
+  .center-column .benefit-desc {
+    font-size: 15px;
+  }
+}
+
 @media (max-width: 1200px) {
   #section1 {
     min-height: auto;
@@ -533,6 +680,16 @@ footer {
     max-width: 100%;
     display: flex;
     justify-content: center;
+  }
+
+  .right-content-wrapper {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .content-and-form-wrapper {
+    flex-direction: column;
+    align-items: center;
   }
 
   .center-column,
